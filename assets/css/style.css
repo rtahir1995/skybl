@@ -9,18 +9,12 @@
 body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 100%;
     align-items: center;
     font-family: 'Comfortaa', cursive;
     background-color: #DB6E00;
-    width: 100%;
-    height: 100vh;
-    min-width: 320px;
 }
-
-
-
-
-
 
 /* Responsible */
 
@@ -31,9 +25,9 @@ body {
         display: flex;
         justify-content: center;
         width: 100%;
-        min-width: 1024px;
         background-color: #E87400;
         box-shadow: 0px 0px 6px black;
+        z-index: 9999;
         /* #E1450C */
         /* #FF7F00 */
     }
@@ -41,7 +35,7 @@ body {
 
     .header-main {
         display: flex;
-        margin: 0 10px;
+        padding: 0 10px;
         max-width: 1280px;
         width: 100%;
     }
@@ -54,13 +48,20 @@ body {
         padding-bottom: 10px;
     }
 
-    .signInSVG {
+    .signInSVG  {
         display: flex;
         margin-left: auto;
-        align-items: flex-end;
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
+    .signInSVG a {
+        display: flex;
+        margin-left: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
 
     .logoSVG svg {
         fill: #fff;
@@ -74,6 +75,9 @@ body {
         height: 25px;
     }
 
+    .signInSVG svg:hover {
+        fill: #5C2E00;
+    }
     .mobileNav svg {
         display: none;
         width: 100px;
@@ -89,6 +93,10 @@ body {
         display: none;
     }
 
+    .mobileS {
+        display: none;
+    }
+
     nav {
         display: flex;
         height: 100%;
@@ -100,8 +108,7 @@ body {
         justify-content: center;
         height: 100%;
         width: 100px;
-        margin-right: 20px;
-        margin-left: 20px;
+        margin: 0 20px;
         color: #fff;
         font-size: 13px;
         font-weight: 700;
@@ -124,18 +131,31 @@ body {
     main {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        max-width: 1280px;
-        margin: 0 20px;
+        width: 100%;
+        background-image: url(../img/backImg.jpg); 
+        background-size: cover;
+        background-position: center; 
+        flex-grow: 1;
+    }
+
+    .imgSection {
         width: 100%;
         flex-grow: 1;
     }
 
+    .functSection {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        width: 100%;
+        background-color: #DB6E00; 
+        flex-grow: 2;
+    }
+    
     .mainDiv {
         display: flex;
         flex-direction: column;
+        max-width: 1280px;
         color: #fff;
     }
     
@@ -143,6 +163,7 @@ body {
     /* Description */
 
     .description {
+        text-align: center;
         margin-bottom: 30px;
         padding: 50px 20px 0;
     }
@@ -240,8 +261,7 @@ body {
         width: 100%;
         background-color: #E87400;
         box-shadow: 0px 0px 6px black;
-        /* #E1450C */
-        /* #FF7F00 */
+        z-index: 9999;
     }
 
 
@@ -266,6 +286,7 @@ body {
         padding-bottom: 10px;
     }
 
+    
     .logoSVG svg {
         fill: #fff;
         width: 30%;
@@ -277,6 +298,10 @@ body {
         margin-bottom: auto;
         fill: #fff;
         height: 25px;
+    }
+
+    .signInSVG svg:hover {
+        fill: #5C2E00;
     }
 
     .mobileNav {
@@ -295,14 +320,17 @@ body {
     .desktop {
         display: none;
     }
+
+    .mobileS {
+        display: none;
+    }
     
     .navigation {
-        /* display: none; */
         position: absolute;
         right: 0;
         height: 100%;
         width: 30%;
-        background-color: rgba(0, 0, 0, 0.452);
+        background-color: rgba(143, 77, 16, 0.459);
     }
 
     nav {
@@ -311,6 +339,7 @@ body {
 
     nav a {
         width: 100%;
+        height: 100%;
         text-align: center;
         color: #fff;
         text-decoration: none;
@@ -320,35 +349,375 @@ body {
         width: 100%;
         margin-bottom: 10px;
         padding-bottom: 10px;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #5C2E00;
     }
 
+    .activeNav {
+        color: #5C2E00;;
+    }
+
+    nav a:hover {
+        color: #5C2E00;
+    }
 
     /* MAIN */
-
     main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-image: url(../img/backImg.jpg); 
+        background-size: cover;
+        background-position: center; 
         flex-grow: 1;
     }
-    .mainDiv {
-        display: none;
+
+    .imgSection {
+        width: 100%;
+        flex-grow: 1;
     }
 
+    .functSection {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        width: 100%;
+        background-color: #DB6E00; 
+        flex-grow: 2;
+    }
+    
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        max-width: 1280px;
+        color: #fff;
+    }
+    
+
+    /* Description */
+
+    .description {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 50px 20px 0;
+    }
+
+    .description h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .description h2 {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+
+    /* Buttons */
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        margin-bottom: 40px;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .buttons a {
+        height: 100%;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .buttonForm1,  .buttonForm2 {
+        height: 30px;
+        min-width: 150px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        overflow-x: hidden;
+    }
+
+    .buttonForm1 {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .button {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonForm2 {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .button:hover {
+        background-color: #fff;
+        color: #DB6E00;
+    }
+
+    .activeButton {
+        background-color: #fff;
+        color: #DB6E00;
+    }
+
+    
     /* FOOTER */
 
     footer {
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 50px;
+        font-size: 13px;
         align-items: center;
         justify-content: center;
         font-weight: normal;
         background-color: #5C2E00;
-        /* color: #fff; */
-        z-index: 99999;
+        color: #fff;
     }
-
 }
 
 @media  screen and (max-width: 425px) {
+     /* HEADER */
+    header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #E87400;
+        box-shadow: 0px 0px 6px black;
+        z-index: 9999;
+    }
+
+
+    .header-main {
+        display: flex;
+        margin: 0 10px;
+        width: 100%;
+    }
+
+    /* SVG */
+    .logoSVG {
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .signInSVG {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
     
+    .logoSVG svg {
+        fill: #fff;
+        width: 30%;
+        /* height: 50px; */
+    }
+    .signInSVG a {
+        margin-right: auto;
+    }
+
+    .mobileS {
+        margin-right: 30px;
+    }
+    .signInSVG .mobileS2 {
+        fill: #fff;
+        height: 25px;
+    }
+
+    .signInSVG .mobileS1 {
+        fill: #fff;
+        height: 50px;
+    }
+
+    .signInSVG .mobileS2:hover {
+        fill: #5C2E00;
+    }
+
+    .mobileNav {
+        display: none;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .mobileNav svg {
+        height: 50px;
+        fill: #5C2E00;
+    }
+
+    /* Navigation */
+
+    .desktop {
+        display: none;
+    }
+
+    .navigation {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #DB6E00;
+    }
+
+    nav {
+        margin-top: 10%;
+    }
+
+    nav a {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav div {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #5C2E00;
+    }
+
+    .activeNav {
+        color: #5C2E00;;
+    }
+
+    nav a:hover {
+        color: #5C2E00;
+    }
+
+    /* MAIN */
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-image: url(../img/backImg.jpg); 
+        background-size: cover;
+        background-position: center; 
+        flex-grow: 1;
+    }
+
+    .imgSection {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .functSection {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        width: 100%;
+        background-color: #DB6E00; 
+        flex-grow: 2;
+    }
+    
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        max-width: 1280px;
+        color: #fff;
+    }
+    
+
+    /* Description */
+
+    .description {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 50px 20px 0;
+    }
+
+    .description h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .description h2 {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+
+    /* Buttons */
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        margin-bottom: 40px;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .buttons a {
+        height: 100%;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .buttonForm1,  .buttonForm2 {
+        height: 30px;
+        min-width: 100px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        overflow-x: hidden;
+    }
+
+    .buttonForm1 {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .button {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonForm2 {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .button:hover {
+        background-color: #fff;
+        color: #DB6E00;
+    }
+
+    .activeButton {
+        background-color: #fff;
+        color: #DB6E00;
+    }
+
+    
+    /* FOOTER */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50px;
+        font-size: 13px;
+        align-items: center;
+        justify-content: center;
+        font-weight: normal;
+        background-color: #5C2E00;
+        color: #fff;
+    }
 }
