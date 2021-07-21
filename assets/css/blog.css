@@ -1,0 +1,9 @@
+header {
+    z-index: 99999;
+}
+
+.mainDiv {
+    height: 100%;
+    width: 100%;
+    background-color: #C76810;
+}
