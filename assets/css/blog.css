@@ -1,9 +1,29 @@
 header {
-    z-index: 99999;
+    top: 0;
+    position: fixed;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    /* background-image: none; */
 }
 
 .mainDiv {
-    height: 100%;
-    width: 100%;
     background-color: #C76810;
+    padding: 20px;
+    width: 80%;
+    flex-grow: 1;
 }
+
+.post {
+    background-color: rgba(0, 0, 0, 0.233);
+    margin: 2px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.post1 {
+    margin-top: 70px;
+} 

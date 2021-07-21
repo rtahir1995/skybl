@@ -1,0 +1,146 @@
+/* General */
+
+.pupupSection {
+    display: none;
+}
+
+.pupup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.63);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999999999;
+}
+
+.logInPage {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    height: 400px;
+    background-color: #F07E13;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+
+.pupupBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* Header */
+
+.pupupHeader {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logInLogo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.logInLogo svg {
+    height: 60px;
+    fill: #fff;
+}
+
+/* Main */
+.pupupMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.pupupDes {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.formDiv {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.logInForm {
+    width: 100%;
+}
+
+.formGroup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.inputName {
+    position: absolute;
+    font-size: 20px;
+    top: 15px;
+    left: 25px;
+}
+
+.email {
+    padding-top: 20px;
+    padding-left: 26px;
+    width: 100%;
+    height: 100%;
+}
+
+#email {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.password {
+    padding-top: 20px;
+    padding-left: 26px;
+    width: 100%;
+    height: 100%;
+}
+
+#password {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logIn {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+

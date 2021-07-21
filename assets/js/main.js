@@ -63,3 +63,18 @@ $('.mobileNav').on('click', function () {
 });
 
 
+$('.pupup').on('click', function () {
+    $('.pupupSection').css({
+        display: 'none'
+    });
+});
+
+$('.signUpButton').on('click', function() {
+    $('.pupupSection').css({
+        display: 'block'
+    });
+});
+
+$('.logInPage').on('click', function(event) {
+    event.stopPropagation();
+});
