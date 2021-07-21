@@ -4,102 +4,219 @@
     padding: 0;
 }
 
-
-
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: 'Comfortaa', cursive;
-    background-color: #FF7F00;
-    width: 100vw;
+    background-color: #DB6E00;
+    width: 100%;
     height: 100vh;
-    border: 1px solid;
+    min-width: 320px;
 }
 
 
-/* HEADER */
-
-header {
-    align-self: center;
-    max-width: 1280px;
-    width: 100%;
-    height: 50px;
-    padding: 5px 20px;
-}
-
-
-/* SVG */
-
-svg {
-    fill: #fff;
-    height: 50px;
-}
-
-.st0{
-    fill:#ffffff;
-}
-
-/* MAIN */
-
-main {
-    display: flex;
-    /* border: solid black 1px; */
-    flex-grow: 1;
-    align-self: center;
-    max-width: 1280px;
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-}
-
-/* Flights Section */
-
-.flights {
-    height: 450px;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    /* border: 1px solid black; */
-}
-
-.flights h1 {
-    font-size: 44px;
-    font-weight: 700;
-}
-
-.flights h2 {
-    font-size: 17px;
-    font-weight: 600;
-}
-
-
-/* Hotels Section*/
-
-.hotels {
-    display: none;
-}
-
-/* Blogs Section */
-
-.blogs{
-    display: none;
-}
-
-
-/* Companion  Section*/
-
-.companion {
-    display: none;
-}
 
 /* FOOTER */
 
 footer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 50px;
     font-size: 13px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-weight: normal;
-    background-color: #111;
+    background-color: #5C2E00;
     color: #fff;
+}
+
+
+
+/* Responsible */
+
+@media  screen and (min-width: 1024px) {
+    
+    /* HEADER */
+    header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        min-width: 1024px;
+        background-color: #E87400;
+        box-shadow: 0px 0px 6px black;
+        /* #E1450C */
+        /* #FF7F00 */
+    }
+
+
+    .header-main {
+        display: flex;
+        margin: 0 10px;
+        max-width: 1280px;
+        width: 100%;
+    }
+
+
+    /* SVG */
+    .logoSVG {
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .signInSVG {
+        display: flex;
+        margin-left: auto;
+        align-items: flex-end;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logoSVG svg {
+        fill: #fff;
+        height: 50px;
+    }
+
+    .signInSVG svg {
+        margin-top: auto;
+        margin-bottom: auto;
+        fill: #fff;
+        height: 25px;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+        display: flex;
+        height: 100%;
+    }
+
+    nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100px;
+        margin-right: 20px;
+        margin-left: 20px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        border-top: 4px solid #5C2E00;
+        color: #5C2E00;
+    }
+
+    .activeNav {
+        border-top: 4px solid #5C2E00;
+        background-color: #E87400;
+        color: #5C2E00;
+    }
+
+    /* MAIN */
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 1280px;
+        margin: 0 20px;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+    
+
+    /* Description */
+
+    .description {
+        margin-bottom: 30px;
+        padding: 50px 20px 0;
+    }
+
+    .description h1 {
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .description h2 {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+
+    /* Buttons */
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .buttons a {
+        height: 100%;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .buttonForm1,  .buttonForm2 {
+        height: 30px;
+        min-width: 150px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        overflow-x: hidden;
+    }
+
+    .buttonForm1 {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .button {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonForm2 {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .button:hover {
+        background-color: #fff;
+        color: #DB6E00;
+    }
+
+    .activeButton {
+        background-color: #fff;
+        color: #DB6E00;
+    }
+}
+
+@media  screen and (min-width: 768px) {
+    
+}
+
+@media  screen and (max-width: 767px) {
+    
 }
