@@ -33,6 +33,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- DatePicker CSS -->
+    <link rel="stylesheet" href="./assets/plugins/datepicker/daterangepicker.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pupup.css">
@@ -350,50 +353,90 @@
                 </div>
                 <!-- / .description -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <!-- Search Form -->
                 <div class="searchTicket">
-                    <form action="">
-                        <div class="formDiv">
-                            <div class="directions">
-                                <div class="from">
-                                    <input type="text">
-                                    <div class="directionChange">
-                                        <svg width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg"
-                                            class="svg1">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4V6L0 3L3 0V2H13V4H3Z">
-                                            </path>
-                                        </svg>
-                                        <svg width="13" height="6" viewBox="0 0 13 6">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4V6L0 3L3 0V2H13V4H3Z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <!-- /.from -->
-                                <div class="to">
-                                    <input type="text">
-                                </div>
-                                <!-- /.to -->
-                            </div>
-                            <!-- /.directions -->
-                            <div class="flightDate">
-                                <div class="depart">
-                                    <select name="" id=""></select>
-                                </div>
-                                <!-- /.depart -->
 
-                                <div class="return">
-                                    <select name="" id=""></select>
-                                </div>
-                                <!-- /.return -->
-                            </div>
-                            <!-- /.flightDate -->
-                            <div class="passengers">
-                                <select name="" id=""></select>
-                            </div>
+
+                    <form action="" class="searchForm">
+
+
+
+
+
+
+                        <div class="mainSearch firstFlight">
+                            <label for="fromFlights" class="fromFlights">From</label>
+                            <input type="text" name="fromFlights" id="fromFlights">
                         </div>
+                        <!-- / .mainSearch firstFlight  -->
+
+                        <div class="mainSearch secondFlight">
+
+                            <!-- SVG -->
+                            <a href="#" class="directionChange">
+                                <svg width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg"
+                                    class="svg1">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4V6L0 3L3 0V2H13V4H3Z">
+                                    </path>
+                                </svg>
+                                <svg width="13" height="6" viewBox="0 0 13 6" class="svg2">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4V6L0 3L3 0V2H13V4H3Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <!-- /.directionChange -->
+
+                            <label for="toFlights" class="toFlights">To</label>
+                            <input type="text" name="toFlights" id="toFlights">
+                        </div>
+                        <!-- / .mainSearch secondFlight  -->
+
+                        <div class="mainSearch thirdFlight">
+                            <label for="departFlights" class="departFlights">Depart
+                                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M11 11H7v4h4v-4zm5-9v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-1V2h-2zm3 18H5V9h14v11z">
+                                    </path>
+                                </svg>
+                            </label>
+                            <input type="text" name="departFlights" id="departFlights">
+                        </div>
+                        <!-- / .mainSearch thirdFlight-->
+
+                        <div class="mainSearch fourthFlight">
+                            <label for="returnFlights" class="returnFlights">Return</label>
+                            <input type="text" name="returnFlights" id="returnFlights">
+                        </div>
+                        <!-- / .mainSearch fourthFlight-->
+
+                        <div class="mainSearch fifthFlight">
+                            <label for="passengerFlights" class="passengerFlights">Passenger</label>
+                            <input type="text" name="passengerFlights" id="passengerFlights">
+                        </div>
+                        <!-- / .mainSearch fifthFlight-->
+                        <button>Search flights</button>
+
+                    </form>
+                    <!-- /.searchFomr -->
+
+
+                    <!-- <input type="text" name="daterange" value=""> -->
 
                 </div>
+
                 <!-- /.searchTicket -->
             </div>
         </section>
@@ -470,8 +513,14 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!-- DatePicker JS -->
+    <script src="./assets/plugins/datepicker/moment.min.js"></script>
+    <script src="./assets/plugins/datepicker/daterangepicker.js"></script>
+
     <!-- JavaScript -->
+    <script src="./assets/js/animation.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/flights.js"></script>
 
 </body>
 
