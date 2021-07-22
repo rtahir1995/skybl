@@ -2,119 +2,6 @@
 
 /* General */
 
-.searchForm {
-    display: flex;
-}
-
-.mainSearch {
-    position: relative;
-    height: 60px;
-    max-width: 170px;
-    background-color: #fff;
-    margin-right: 2px;
-}
-
-
-.mainSearch label {
-    position: absolute;
-    color: black;
-    top: 21px;
-    left: 16px;
-    word-break: break-all;
-    word-wrap: break-word;
-}
-
-.mainSearch input {
-    height: 100%;
-    width: 100%;
-    padding-top: 10px;
-    border: none;
-    outline: none;
-    padding-left: 5px;
-}
-
-
-.firstFlight, .firstFlight input {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px; 
-}
-.secondFlight input {
-    padding-left: 15px;
-}
-
-
-/* .fifthFlight, .fifthFlight input {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px; 
-} */
-
-.searchForm button {
-    background-color: #e1450cb7;
-    border: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px; 
-    color: white;
-}
-
-.searchForm button:hover {
-    background-color: #E1450C;
-    border: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px; 
-    color: white;
-}
-
-
-
-/*  SVG */
-
-.directionChange {
-    position: absolute;
-    top: 18px;
-    right: 158px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 26px;
-    z-index: 2;
-    background-color: white;
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.4);
-}
-
-
-.directionChange:hover {
-    top: 17px;
-    right: 156px;
-    width: 30px;
-    height: 30px;
-    transition: all 0.2s ease;
-}
-
-
-
-.directionChange svg {
-    fill: #DB6E00;
-}
-
-.svg1 {
-    transform: rotate(180deg);
-}
-
-.departFlights {
-    position: relative;
-}
-.departFlights svg {
-    position: absolute;
-    width: 100%;
-    top: 15px;
-    left: 130px;
-    fill: #DB6E00;
-}
-
-
 /* Date Picker */
 .daterangepicker.openscenter:after {
     left: 0;
@@ -134,9 +21,140 @@
     color: red;
 } */
 .daterangepicker td.available:hover {
-    background-color: #e87400b9;;
+    background-color: #e87400b9;
     color: #fff;
 }
+
+
+
+/* For Desktop */
+@media screen and (min-width: 1024px) {
+
+
+    .searchForm {
+        display: flex;
+    }
+
+    .mainSearch {
+        position: relative;
+        height: 60px;
+        max-width: 170px;
+        background-color: #fff;
+        margin-right: 2px;
+    }
+
+
+    .mainSearch label {
+        position: absolute;
+        color: black;
+        top: 21px;
+        left: 16px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .mainSearch input {
+        height: 100%;
+        width: 100%;
+        padding-top: 10px;
+        border: none;
+        outline: none;
+        padding-left: 5px;
+    }
+
+
+    .firstFlight, .firstFlight input {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px; 
+    }
+    .secondFlight input {
+        padding-left: 15px;
+    }
+
+
+    .searchForm button {
+        background-color: #e1450cb7;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; 
+        color: white;
+        font-weight: 700;
+        padding: 20px;
+    }
+
+    .searchForm button:hover {
+        background-color: #E1450C;
+    }
+
+
+
+    /*  SVG */
+
+    .directionChange {
+        position: absolute;
+        top: 18px;
+        right: 158px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        z-index: 2;
+        background-color: white;
+        border: 2px solid #DB6E00;
+    }
+
+
+    .directionChange:hover {
+        top: 17px;
+        right: 156px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease;
+    }
+
+
+
+    .directionChange svg {
+        fill: #DB6E00;
+    }
+
+    .svg1 {
+        transform: rotate(180deg);
+    }
+
+    .departFlights {
+        position: relative;
+    }
+    .departFlights svg {
+        position: absolute;
+        width: 100%;
+        top: 15px;
+        left: 130px;
+        fill: #DB6E00;
+    }
+
+    .returnFlights {
+        position: relative;
+    }
+    .returnFlights svg {
+        position: absolute;
+        width: 100%;
+        top: -3px;
+        left: 112px;
+        fill: #DB6E00;
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+    .searchTicket {
+        display: none;
+    }
+}
+
 
 
 
