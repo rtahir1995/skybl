@@ -1,5 +1,6 @@
 'use strict';
 
+// Deactive Links
 $('.activeNav').on('click', function(e) {
     e.preventDefault();
 });
@@ -12,67 +13,41 @@ $('.signInSVG').find('a').on('click', function(e) {
     e.preventDefault();
 });
 
-
-$('.mobileS3').on('click', function () {
-    
-    $('.navigationMob').animate({
-        backgroundPositionX: '0',
-    }, 500, function() {
-        $(".navigationMob").css({
-            display: 'none'
-        }).animate({
-            opacity: 1
-        }, 500);
-    });
-
-    $('.mobileNav').find('svg').animate({
-        // height: '30px',
-    }, 1000, function() {
-        $(".mobileNav").css({
-            display: 'flex'
-        }).animate({
-            opacity: 1
-        }, 1000);
-    });
-    
+$('.logInBtn').on('click', function(e) {
+    e.preventDefault();
 });
 
+$('.mobileNav').on('click', function(e) {
+    e.preventDefault();
+});
 
-$('.mobileNav').on('click', function () {
-    
-    $('.navigationMob').animate({
-        // width: 0,
-    }, 500, function() {
-        $(".navigationMob").css({
-            display: 'block'
-        }).animate({
-            opacity: 1
-        }, 500);
-    });
+// Navbar Open CLosed
 
-    $('.mobileNav').find('svg').animate({
-        // height: '0px',
-    }, 500, function() {
-        $(".mobileNav").css({
-            display: 'none'
-        }).animate({
-            opacity: 1
-        }, 500);
-    });
-    
+$('.navOpen').on('click', function () {
+    $('.navOpen').hide(500);
+    $('.navClose').show(500);
+    $('.navigationMob').show(500)
+});
+
+function Closed  () {
+    $('.navClose').hide(500);
+    $('.navOpen').show(500);
+    $('.navigationMob').hide(500)
+}
+
+$('.navClose').on('click', function() {
+    Closed();
 });
 
 
 $('.pupup').on('click', function () {
-    $('.pupupSection').css({
-        display: 'none'
-    });
+    $('.pupupSection').hide(300);
+
 });
 
-$('.signUpButton').on('click', function() {
-    $('.pupupSection').css({
-        display: 'block'
-    });
+$('.logInBtn').on('click', function() {
+    Closed();
+    $('.pupupSection').show(300);
 });
 
 $('.logInPage').on('click', function(event) {

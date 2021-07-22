@@ -63,6 +63,10 @@ body {
         display: flex;
     }
     
+    .navbar {
+        display: none;
+    }
+
     .navigationMob {
         display: none;
     }
@@ -96,6 +100,7 @@ body {
     nav a:hover {
         border-top: 4px solid #5C2E00;
         color: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     .activeNav {
@@ -115,6 +120,11 @@ body {
     .signUpButton svg {
         fill: #fff;
         height: 30px;
+    }
+
+    .signUpButton svg:hover {
+        fill: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     .mobileNav {
@@ -223,6 +233,7 @@ body {
     .button:hover {
         background-color: #fff;
         color: #DB6E00;
+        transition: all 0.5s ease;
     }
 
     .activeButton {
@@ -321,6 +332,7 @@ body {
 
     .mobileS2:hover {
         fill: #5C2E00;
+        transition: all 0.5s ease;
     }
 
 
@@ -338,13 +350,36 @@ body {
         display: none;
     }
 
-    .navigationMob {
+    .navbar {
         position: absolute;
-        display: none;
         right: 0;
+        width: 40%;
         height: 100%;
-        width: 30%;
-        background-color: rgba(143, 77, 16, 0.459);
+    }
+
+    .navigationMob {
+        display: none;
+        height: 100%;
+        width: 100%;
+        padding-top: 100px;
+        background-color: rgba(143, 77, 16, 0.89);
+    }
+
+    .logInMob {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5%;
+        margin-bottom: 50px;
+    }
+
+    .logInMob svg {
+        height: 30px;
+        fill: #fff;
+    }
+
+    .logInMob svg:hover {
+        fill: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     nav {
@@ -372,6 +407,7 @@ body {
 
     nav a:hover {
         color: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     .mobileNav {
@@ -383,6 +419,10 @@ body {
     .mobileNav svg {
         width: 30px;
         fill: #613308;
+    }
+
+    .navClose {
+        display: none;
     }
 
     /* MAIN */
@@ -486,6 +526,7 @@ body {
     .button:hover {
         background-color: #fff;
         color: #DB6E00;
+        transition: all 0.5s ease;
     }
 
     .activeButton {
@@ -507,6 +548,7 @@ body {
         font-weight: normal;
         background-color: #5C2E00;
         color: #fff;
+        z-index: 9999999;
     }
 }
 
@@ -579,6 +621,7 @@ body {
 
     .mobileS2:hover {
         fill: #5C2E00;
+        transition: all 0.5s ease;
     }
 
 
@@ -591,13 +634,38 @@ body {
     .navigation {
         display: none;
     }
-    .navigationMob {
+
+
+    .navbar {
         position: absolute;
-        display: none;
         right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .navigationMob {
+        display: none;
         height: 100%;
         width: 100%;
+        padding-top: 100px;
         background-color: #DB6E00;
+    }
+
+    .logInMob {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5%;
+        margin-bottom: 50px;
+    }
+
+    .logInMob svg {
+        height: 30px;
+        fill: #fff;
+    }
+
+    .logInMob svg:hover {
+        fill: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     nav {
@@ -625,6 +693,7 @@ body {
 
     nav a:hover {
         color: #5C2E00;
+        transition: all 0.5s ease;
     }
 
         .mobileNav {
@@ -636,6 +705,10 @@ body {
     .mobileNav svg {
         width: 30px;
         fill: #613308;
+    }
+
+    .navClose {
+        display: none;
     }
     
     /* MAIN */
@@ -739,6 +812,7 @@ body {
     .button:hover {
         background-color: #fff;
         color: #DB6E00;
+        transition: all 0.5s ease;
     }
 
     .activeButton {
