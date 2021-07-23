@@ -25,10 +25,29 @@
     color: #fff;
 }
 
+/* Input Toggle */
+form {
+    position: relative;
+}
 
+.tglInput {
+    position: absolute;
+    bottom: -45px;
+    right: 128px;
+    display: flex;
+    align-items: center;
+}
+
+.tglInput svg {
+    height: 20px;
+    fill: #fff;
+}
+.tglText {
+    margin: 5px;
+}
 
 /* For Desktop */
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) { */
 
 
     .searchForm {
@@ -86,14 +105,16 @@
         background-color: #E1450C;
     }
 
-
+    .return {
+        display: none;
+    }
 
     /*  SVG */
 
     .directionChange {
         position: absolute;
         top: 18px;
-        right: 158px;
+        left: -14px;
         display: flex;
         flex-direction: column;
         border-radius: 50%;
@@ -109,7 +130,7 @@
 
     .directionChange:hover {
         top: 17px;
-        right: 156px;
+        left: -16px;
         width: 30px;
         height: 30px;
         transition: all 0.2s ease;
@@ -128,32 +149,38 @@
     .departFlights {
         position: relative;
     }
-    .departFlights svg {
+    .thirdFlight svg {
         position: absolute;
-        width: 100%;
-        top: 15px;
-        left: 130px;
+        top: 20px;
+        right: 0;
         fill: #DB6E00;
     }
 
     .returnFlights {
         position: relative;
     }
-    .returnFlights svg {
+    
+    .fifthFlight svg {
         position: absolute;
-        width: 100%;
-        top: -3px;
-        left: 112px;
+        top: 20px;
+        right: 0;
         fill: #DB6E00;
     }
 
-}
+    .fifthFlight label {
+        left: 26px;
+    }
 
-@media screen and (max-width: 1023px) {
+
+
+/* } */
+
+/* @media screen and (max-width: 1023px) {
     .searchTicket {
         display: none;
     }
-}
+} */
+
 
 
 

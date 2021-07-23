@@ -21,6 +21,14 @@ $('.mobileNav').on('click', function(e) {
     e.preventDefault();
 });
 
+$('.buttons').find('a').on('click', function(e) {
+    e.preventDefault();
+});
+
+$('.searchBtn').on('click', function(e) {
+    e.preventDefault();
+});
+
 // Navbar Open CLosed
 
 $('.navOpen').on('click', function () {
@@ -53,3 +61,34 @@ $('.logInBtn').on('click', function() {
 $('.logInPage').on('click', function(event) {
     event.stopPropagation();
 });
+
+
+// Section Change
+
+$('.deactiveHotel').on('click', function () {
+    $('.flights').fadeToggle('slow', function() {
+        $('.hotels').fadeIn('slow');
+    });
+});
+
+$('.deactiveFlights').on('click', function () {
+    $('.hotels').fadeToggle('slow', function() {
+        $('.flights').fadeIn('slow');
+    });
+});
+
+
+// FLight Change 
+
+$('.tglInput').on('change', function(){
+    let a =  $("#changeReturn").is(":checked");
+    if (a === true) {
+        $('.thirdFlight').fadeToggle('slow', function() {
+            $('.fifthFlight').fadeToggle('slow');
+        });
+    } else if (a !== true) {
+        $('.fifthFlight').fadeToggle('slow', function() {
+            $('.thirdFlight').fadeToggle('slow');
+        });
+    }
+})

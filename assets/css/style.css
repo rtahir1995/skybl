@@ -152,14 +152,15 @@ body {
         display: flex;
         justify-content: center;
         width: 100%;
-        width: 100%;
         background-color: #DB6E00; 
         flex-grow: 2;
+        overflow: hidden;
     }
     
     .mainDiv {
         display: flex;
         flex-direction: column;
+        min-height: 286px;
         max-width: 1280px;
         color: #fff;
     }
