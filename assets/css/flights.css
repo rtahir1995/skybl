@@ -30,25 +30,11 @@ form {
     position: relative;
 }
 
-.tglInput {
-    position: absolute;
-    bottom: -45px;
-    right: 128px;
-    display: flex;
-    align-items: center;
-}
 
-.tglInput svg {
-    height: 20px;
-    fill: #fff;
-}
-.tglText {
-    margin: 5px;
-}
+
 
 /* For Desktop */
-/* @media screen and (min-width: 1024px) { */
-
+@media screen and (min-width: 1024px) {
 
     .searchForm {
         display: flex;
@@ -80,7 +66,13 @@ form {
         outline: none;
         padding-left: 5px;
     }
-
+    
+    .firstCol {
+        display: flex;
+    }
+    .secondCol {
+        display: flex;
+    }
 
     .firstFlight, .firstFlight input {
         border-top-left-radius: 10px;
@@ -89,9 +81,33 @@ form {
     .secondFlight input {
         padding-left: 15px;
     }
+    
+    .tglInput {
+        position: absolute;
+        bottom: -45px;
+        right: 128px;
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    
+    .tglInput svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglText {
+        margin: 5px;
+    }
 
+    .tglDiv {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
 
     .searchForm button {
+        height: 100%;
         background-color: #e1450cb7;
         border: none;
         border-top-right-radius: 10px;
@@ -173,13 +189,408 @@ form {
 
 
 
-/* } */
+}
 
-/* @media screen and (max-width: 1023px) {
-    .searchTicket {
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+
+    .navbar {
         display: none;
     }
-} */
+    .mainDiv {
+        max-width: none;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .searchForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainSearch {
+        position: relative;
+        height: 60px;
+        background-color: #fff;
+        margin-right: 2px;
+    }
+
+
+    .mainSearch label {
+        position: absolute;
+        color: black;
+        top: 21px;
+        left: 16px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .mainSearch input {
+        height: 100%;
+        width: 100%;
+        padding-top: 10px;
+        border: none;
+        outline: none;
+        padding-left: 5px;
+    }
+    .firstCol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .secondCol {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .firstFlight, .firstFlight input {
+        border-top-left-radius: 10px;
+        width: 100%;
+    }
+
+    .secondFlight, .secondFlight input {
+        width: 100%;
+        border-top-right-radius: 10px;
+    }
+
+    .secondFlight input {
+        padding-left: 15px;
+    }
+
+    .firstFlight, .firstFlight input {
+        border-top-left-radius: 10px;
+        width: 100%;
+    }
+
+    .secondFlight, .secondFlight input {
+        width: 100%;
+        border-top-right-radius: 10px;
+    }
+
+    
+    
+    .tglInput {
+        position: absolute;
+        bottom: 15px;
+        right: 40px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInput svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglText {
+        margin: 5px;
+    }
+    .thirdFlight, .thirdFlight input, .fifthFlight, .fifthFlight input, .fourthFlight, .fourthFlight input {
+        width: 100%;
+    }
+
+    .secondFlight, .secondFlight input {
+        width: 100%;
+        border-top-right-radius: 10px;
+    }
+
+    .secondFlight input {
+        padding-left: 15px;
+    }
+
+    .tglDiv {
+        position: relative;
+        width: 100%;
+        margin-top: 5px;
+        padding-right: 2px;
+    }
+
+
+    .searchForm button {
+        width: 100%;
+        background-color: #e1450cb7;
+        border: none;
+        border-bottom-right-radius: 10px; 
+        border-bottom-left-radius: 10px; 
+        color: white;
+        font-weight: 700;
+        padding: 20px;
+    }
+
+    .searchForm button:hover {
+        background-color: #E1450C;
+    }
+
+    .return {
+        display: none;
+    }
+
+    /*  SVG */
+
+    .directionChange {
+        position: absolute;
+        top: 18px;
+        left: -14px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        z-index: 2;
+        background-color: white;
+        border: 2px solid #DB6E00;
+    }
+
+
+    .directionChange:hover {
+        top: 17px;
+        left: -16px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease;
+    }
+
+
+
+    .directionChange svg {
+        fill: #DB6E00;
+    }
+
+    .svg1 {
+        transform: rotate(180deg);
+    }
+
+    .departFlights {
+        position: relative;
+    }
+    .thirdFlight svg {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        fill: #DB6E00;
+    }
+
+    .returnFlights {
+        position: relative;
+    }
+    
+    .fifthFlight svg {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        fill: #DB6E00;
+    }
+
+    .fifthFlight label {
+        left: 26px;
+    }
+
+
+}
+
+
+
+@media  screen and (max-width: 425px) {
+    .navbar {
+        display: none;
+    }
+    .mainDiv {
+        max-width: none;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .searchForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainSearch {
+        position: relative;
+        height: 60px;
+        background-color: #fff;
+        margin-right: 2px;
+    }
+
+
+    .mainSearch label {
+        position: absolute;
+        color: black;
+        top: 21px;
+        left: 16px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .mainSearch input {
+        height: 100%;
+        width: 100%;
+        padding-top: 10px;
+        border: none;
+        outline: none;
+        padding-left: 5px;
+    }
+    .firstCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .secondCol {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .firstFlight, .firstFlight input {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        width: 100%;
+    }
+
+    .secondFlight, .secondFlight input {
+        margin-top: 3px;
+        width: 100%;
+    }
+
+    .secondFlight input {
+        padding-left: 15px;
+    }
+
+    
+    
+    .tglInput {
+        position: absolute;
+        bottom: -36px;
+        right: 2px;     
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInput svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglText {
+        margin: 5px;
+    }
+    .thirdFlight, .thirdFlight input, .fifthFlight, .fifthFlight input, .fourthFlight, .fourthFlight input {
+        width: 100%;
+    }
+    .fourthFlight{
+        margin-top: 3px;
+    }
+
+    .secondFlight input {
+        padding-left: 15px;
+    }
+
+    .tglDiv {
+        position: relative;
+        width: 100%;
+        margin-top: 5px;
+        padding-right: 2px;
+    }
+
+
+    .searchForm button {
+        width: 100%;
+        height: 100%;
+        background-color: #e1450cb7;
+        border: none;
+        border-bottom-right-radius: 10px; 
+        border-bottom-left-radius: 10px; 
+        color: white;
+        font-weight: 700;
+        padding: 20px;
+    }
+
+    .searchForm button:hover {
+        background-color: #E1450C;
+    }
+
+    .return {
+        display: none;
+    }
+
+    /*  SVG */
+
+    .directionChange {
+        position: absolute;
+        top: -15px;
+        left: 45%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        z-index: 2;
+        background-color: white;
+        border: 2px solid #DB6E00;
+    }
+
+
+    .directionChange:hover {
+        top: -17px;
+        left: 44%;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease;
+    }
+
+
+
+    .directionChange svg {
+        fill: #DB6E00;
+    }
+
+    .svg1 {
+        transform: rotate(180deg);
+    }
+
+    .departFlights {
+        position: relative;
+    }
+    .thirdFlight svg {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        fill: #DB6E00;
+    }
+
+    .returnFlights {
+        position: relative;
+    }
+    
+    .fifthFlight svg {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        fill: #DB6E00;
+    }
+
+    .fifthFlight label {
+        left: 26px;
+    }
+}
 
 
 
