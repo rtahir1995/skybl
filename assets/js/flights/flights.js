@@ -9,7 +9,7 @@ $('#passengerFlights').on('input', function() {
 var d = []
 
 $.ajax({
-    url: 'assets/js/flights/airports.json',
+    url: './assets/js/flights/airports.json',
     method: 'GET',
     // dataType: 'json'
 }).done(function (response) {
