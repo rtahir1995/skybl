@@ -30,6 +30,24 @@
 
 /*when navigating through the items using the arrow keys:*/
 .autocomplete-active {
-    background-color: DodgerBlue !important;
+    background-color: #DB6E00 !important;
     color: #ffffff;
+}
+
+/* #fromFlightsautocomplete-list {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+} */
+
+.autocomplete-items {
+    margin-top: 2px;
+    
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+}
+
+.firstFlight .autocomplete-items{
+    border-top-left-radius: 10px;
 }
