@@ -28,20 +28,29 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Google fonts -->
+    <!-- Comfortaa -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+
+    <!-- Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- DatePicker CSS -->
-    <link rel="stylesheet" href="./assets/plugins/datepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./assets/plugins/datepickers/datepicker.min.css">
 
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./assets/css/pupup.css">
-    <link rel="stylesheet" href="./assets/css/flights.css">
+    <link rel="stylesheet" href="./assets/css/flight.css">
     <link rel="stylesheet" href="./assets/css/hotels.css">
     <link rel="stylesheet" href="./assets/css/autocomplete.css">
 
@@ -245,11 +254,10 @@
             </div>
             <!-- /.signUpDiv -->
 
-            <!-- Mobile NAV Open -->
-
-            <div class="mobileNav">
+            <!-- Tab NAV Open -->
+            <div class="tabNav">
                 <div class="navOpen">
-                    <a href="#" class="mobileNav">
+                    <a href="javascript:void(0)" class="tabNav" onclick='openTabNav()'>
                         <svg viewBox="0 0 122.88 95.95">
                             <g>
                                 <path class="st0"
@@ -260,7 +268,7 @@
                 </div>
                 <!-- /.navOpen -->
                 <div class="navClose">
-                    <a href="#" class="mobileNav">
+                    <a href="javascript:void(0)" class="tabNav" onclick='closeTabNav()'>
                         <svg viewBox="0 0 55 45">
                             <path
                                 d="M18,25.14c-1.66-1.65-3.28-3.24-4.89-4.85-3-3-6-6-9-9A5,5,0,0,1,2.43,6.65a4.87,4.87,0,0,1,3.33-4,4.41,4.41,0,0,1,4.89,1q6.83,6.7,13.6,13.47a11.29,11.29,0,0,1,.83,1c2.66-2.67,5.15-5.2,7.67-7.71C35,8.14,37.38,5.91,39.65,3.6a5,5,0,0,1,7.86,1.77,4.36,4.36,0,0,1-.69,5.1c-2.94,3.06-5.92,6.07-8.91,9.09-1.84,1.86-3.71,3.69-5.76,5.73a8,8,0,0,1,1,.72c4.27,4.27,8.51,8.56,12.8,12.81A5.43,5.43,0,0,1,47.85,44c-.68,3.53-5.24,5.29-7.93,2.91-2.27-2-4.37-4.21-6.53-6.34-2.5-2.48-5-5-7.47-7.46-.24-.24-.49-.47-.94-.89a7.26,7.26,0,0,1-.69,1q-6.48,6.47-13,12.93a5.51,5.51,0,0,1-3,1.81A5.16,5.16,0,0,1,3,45.42a4.72,4.72,0,0,1,.53-5.65c2.95-3.1,6-6.11,9-9.15C14.33,28.81,16.14,27,18,25.14Z"
@@ -269,21 +277,43 @@
                     </a></div>
                 <!-- /.navClose -->
             </div>
-            <!-- /.mobileNav -->
+            <!-- /.tabNav -->
+
+            <!-- Mob NAV Open -->
+            <div class="mobNav">
+                <div class="navOpen">
+                    <a href="javascript:void(0)" class="mobNav" onclick='openMobNav()'>
+                        <svg viewBox="0 0 122.88 95.95">
+                            <g>
+                                <path class="st0"
+                                    d="M8.94,0h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,17.88,0,13.86,0,8.94l0,0 C0,4.02,4.02,0,8.94,0L8.94,0z M8.94,78.07h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105 C4.02,95.95,0,91.93,0,87.01l0,0C0,82.09,4.02,78.07,8.94,78.07L8.94,78.07z M8.94,39.03h105c4.92,0,8.94,4.02,8.94,8.94l0,0 c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,56.91,0,52.89,0,47.97l0,0C0,43.06,4.02,39.03,8.94,39.03L8.94,39.03z" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <!-- /.navOpen -->
+                <div class="navClose">
+                    <a href="javascript:void(0)" class="mobNav" onclick='closeMobNav()'>
+                        <svg viewBox="0 0 55 45">
+                            <path
+                                d="M18,25.14c-1.66-1.65-3.28-3.24-4.89-4.85-3-3-6-6-9-9A5,5,0,0,1,2.43,6.65a4.87,4.87,0,0,1,3.33-4,4.41,4.41,0,0,1,4.89,1q6.83,6.7,13.6,13.47a11.29,11.29,0,0,1,.83,1c2.66-2.67,5.15-5.2,7.67-7.71C35,8.14,37.38,5.91,39.65,3.6a5,5,0,0,1,7.86,1.77,4.36,4.36,0,0,1-.69,5.1c-2.94,3.06-5.92,6.07-8.91,9.09-1.84,1.86-3.71,3.69-5.76,5.73a8,8,0,0,1,1,.72c4.27,4.27,8.51,8.56,12.8,12.81A5.43,5.43,0,0,1,47.85,44c-.68,3.53-5.24,5.29-7.93,2.91-2.27-2-4.37-4.21-6.53-6.34-2.5-2.48-5-5-7.47-7.46-.24-.24-.49-.47-.94-.89a7.26,7.26,0,0,1-.69,1q-6.48,6.47-13,12.93a5.51,5.51,0,0,1-3,1.81A5.16,5.16,0,0,1,3,45.42a4.72,4.72,0,0,1,.53-5.65c2.95-3.1,6-6.11,9-9.15C14.33,28.81,16.14,27,18,25.14Z"
+                                transform="translate(-2.32 -2.31)" />
+                        </svg>
+                    </a></div>
+                <!-- /.navClose -->
+            </div>
+            <!-- /.mobNav -->
 
 
         </div>
         <!-- . / header-main -->
     </header>
 
-
-    <!-- Navigation fot Mobile and Tablet -->
-    <div class="navbar">
-        <div class="navigationMob">
-
-            <!-- Logo for Mobile S size -->
-            <div class="logInMob">
-                <a href="#" class="logInBtn">
+    <!-- Tab Nav -->
+    <div class="tabSideNav">
+        <div id="myTabSidenav" class="sidenav">
+            <div class="lBtn">
+                <a href="javascript:void(0)" class="logBtn">
                     <svg viewBox="0 0 20 20">
                         <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
                         <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
@@ -291,35 +321,40 @@
                     </svg>
                 </a>
             </div>
-            <!-- /.logInMob -->
-
-
-            <!-- Mobile Nav Link -->
-            <nav>
-                <a href="./index.html" class="activeNav">
-                    <div class="navItem">HOME</div>
-                </a>
-                <a href="./blog.html">
-                    <div class="navItem">BLOG</div>
-                </a>
-                <a href="./companion.html">
-                    <div class="navItem">COMPANION</div>
-                </a>
-            </nav>
-
-
+            <!-- /.lBtn -->
+            <a href="./">HOME</a>
+            <a href="./blog.html">BLOG</a>
+            <a href="./companion.html">COMPANION</a>
         </div>
-        <!-- /.navigationMob -->
     </div>
-    <!-- /.navbar -->
+    <!-- /.tabSideNav -->
 
+    <!-- Mobile Nav -->
+    <div class="mobileSideNav">
+        <div id="myMobSidenav" class="sidenav">
+            <div class="lBtn">
+                <a href="javascript:void(0)" class="logBtn">
+                    <svg viewBox="0 0 20 20">
+                        <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
+                        <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
+                        </polygon>
+                    </svg>
+                </a>
+            </div>
+            <!-- /.lBtn -->
+            <a href="./">HOME</a>
+            <a href="./blog.html">BLOG</a>
+            <a href="./companion.html">COMPANION</a>
+        </div>
+    </div>
+    <!-- /.mobileSideNav -->
 
 
     <!-- MAIN -->
     <main>
 
         <!-- Space for Image -->
-        <section class="imgSection"></section>
+        <section class="imgSection firstImgSec"></section>
         <!-- / .imgSection -->
 
 
@@ -327,7 +362,6 @@
         <section class="functSection">
 
             <div class="mainDiv">
-
 
                 <section class="flights">
                     <!-- Description -->
@@ -355,117 +389,164 @@
                     <!-- / .description -->
 
 
+                    <!-- FLights Search Section -->
+
+                    <section class="flightSearch">
+                        <div class="mainFlightForm">
 
 
-
-
-                    <!-- Search Form -->
-                    <div class="searchTicket">
-
-
-                        <form action="" class="searchForm">
-
-                            <div class="firstCol">
-                                <div class="mainSearch firstFlight">
-                                    <label for="fromFlights" class="fromFlights">From</label>
-                                    <input type="text" name="fromFlights" id="fromFlights" autocomplete="off">
+                            <div class="firstFlightGroup">
+                                <div class="fromFlight">
+                                    <label for="fromFlight" class="fromFlightLab">From</label>
+                                    <!-- /.fromLab -->
+                                    <input type="text" name="fromFlight" id="fromFlight" autocomplete="off"
+                                        placeholder="From">
                                 </div>
-                                <!-- / .mainSearch firstFlight  -->
+                                <!-- /.fromFlight -->
 
-                                <div class="mainSearch secondFlight">
-
-                                    <!-- SVG -->
-                                    <a href="#" class="directionChange">
-                                        <svg width="13" height="6" viewBox="0 0 13 6" xmlns="http://www.w3.org/2000/svg"
-                                            class="svg1">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4V6L0 3L3 0V2H13V4H3Z">
-                                            </path>
-                                        </svg>
-                                        <svg width="13" height="6" viewBox="0 0 13 6" class="svg2">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4V6L0 3L3 0V2H13V4H3Z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                    <!-- /.directionChange -->
-
-                                    <label for="toFlights" class="toFlights">To</label>
-                                    <input type="text" name="toFlights" id="toFlights" autocomplete="off">
+                                <div class="toFlight">
+                                    <label for="toFligh" class="toFlightLab">To</label>
+                                    <!-- /.fromFlightLab -->
+                                    <input type="text" name="toFlight" id="toFlight" autocomplete="off"
+                                        placeholder="To">
+                                    <div class="demo">
+                                        <a href="#" class="directionChange">
+                                            <svg width="13" height="6" viewBox="0 0 13 6"
+                                                xmlns="http://www.w3.org/2000/svg" class="svg1">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3 4V6L0 3L3 0V2H13V4H3Z">
+                                                </path>
+                                            </svg>
+                                            <svg width="13" height="6" viewBox="0 0 13 6" class="svg2">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3 4V6L0 3L3 0V2H13V4H3Z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <!-- / .mainSearch secondFlight  -->
+                                <!-- /.toFlight -->
                             </div>
-                            <!-- / .firstCol -->
+                            <!-- /.firstFlightGroup -->
 
-                            <div class="secondCol">
-
-                                <!-- Without Return -->
-                                <div class="mainSearch thirdFlight noreturn">
-                                    <label for="departFlights" class="departFlights">Depart</label>
+                            <div class="secondFlightGroup">
+                                <div class="departFlight">
+                                    <label for="departFlight" class="departFlightLab">Depart</label>
+                                    <!-- /.departFlightLab -->
+                                    <input type="text" name="departFlight" id="departFlight" autocomplete="off"
+                                        placeholder="Depart">
                                     <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
                                             d="M11 11H7v4h4v-4zm5-9v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-1V2h-2zm3 18H5V9h14v11z">
                                         </path>
                                     </svg>
-                                    <input type="text" name="departFlights" id="departFlights" autocomplete="off">
                                 </div>
-                                <!-- With Retutn -->
-                                <div class="mainSearch fifthFlight return">
-                                    <label for="returnFlights" class="returnFlights">Depart &#8646; Return</label>
+                                <!-- /.departFlight -->
+                                <div class="flightBtn">
+                                    <a href="javascript:void(0);" id="flightBtn" class="flSbtn"> Search flights</a>
+                                    <div class="tglInput">
+                                        <svg x="0px" y="0px" viewBox="0 0 23.6 23.6">
+                                            <g>
+                                                <path d="M10.8,10.1C12.3,9.4,13.6,8.7,15,8c-0.6-0.7-1-1.4-1.6-2c-0.2-0.2-0.6-0.3-0.8-0.3c-0.6,0-1.1,0.1-1.7,0.1
+            c-0.1-0.1-0.1-0.2-0.2-0.2C11,5.4,11.1,5.1,11.4,5c1.2-0.4,1.9-1.2,2.4-2.4c0.1-0.2,0.4-0.4,0.8-0.6c-0.8,2.3,0.5,3.3,2.2,4.2
+            c0.7-1.3,1.4-2.7,2.1-4.1c0.8,0.4,1.1,1,0.9,1.9c-0.3,1.3-0.6,2.6-0.7,3.9c0,0.4,0.1,0.8,0.4,1.1c0.5,0.6,1.1,1.1,1.6,1.7
+            c0.5,0.5,0.7,1,0.2,1.6c-0.5,0.5-1.2,0.4-1.5-0.1c-1.4-2.2-3.3-2.3-5.5-1.5c-0.4,0.1-0.9,0.2-1.3,0.3
+            C11.6,11.2,11.6,11.2,10.8,10.1z"></path>
+                                                <path d="M6.9,17.1c-0.7,1.4-1.4,2.8-2.1,4.2c-0.8-0.4-1.1-0.9-0.9-1.8c0.4-1.3,0.6-2.7,0.8-4.1c0-0.3-0.1-0.7-0.3-0.9
+            c-0.5-0.6-1.2-1.2-1.7-1.8c-0.5-0.5-0.7-1-0.1-1.6c0.5-0.5,1.1-0.3,1.6,0.2c0.7,0.7,1.4,1.7,2.3,2c0.9,0.3,2-0.3,3-0.4
+            c0.5-0.1,1-0.2,1.5-0.3c0.8-0.3,1.4,0,1.9,0.8c-1.3,0.7-2.7,1.4-4.2,2.1c0.6,0.7,1,1.7,1.7,2.1c0.6,0.4,1.6,0.2,2.7,0.2
+            c-0.3,0.3-0.4,0.6-0.6,0.7c-1.2,0.4-2,1.2-2.4,2.4c-0.1,0.2-0.4,0.4-0.7,0.7c-0.1-1.1,0.1-2.1-0.2-2.8C8.6,18.1,7.6,17.7,6.9,17.1z
+            "></path>
+                                                <path d="M15.6,18.2c1.7,0.1,2.8-1.1,2.9-2.7c0-0.3,0.2-0.6,0.3-0.9c0.1,0.3,0.4,0.6,0.4,0.9c0.1,1.9-1.5,3.6-3.5,3.5
+            c-0.3,0-0.6-0.3-0.9-0.4C15,18.5,15.3,18.4,15.6,18.2z"></path>
+                                                <path d="M4.3,7.8c0.2-2.1,1.9-3.7,3.9-3.5c0.2,0,0.4,0.3,0.6,0.4C8.6,4.9,8.4,5,8.2,5.1c-1.9,0.1-3,1.1-3,2.8
+            c0,0.3-0.2,0.6-0.3,0.9C4.6,8.4,4.4,8.1,4.3,7.8z"></path>
+                                            </g>
+                                        </svg>
+                                        <div class="tglText">Return</div>
+
+                                        <input type="checkbox" name="" id="changeReturn">
+                                    </div>
+                                </div>
+                                <!-- /.flightBtn -->
+                            </div>
+                            <!-- /.secondFlightGroup -->
+
+                            <div class="thirdFlightGroup" id="depret">
+
+                                <dib class="departRetFlightLab">
+
+                                    <label for="departFlight" class="departRetFlight">Depart</label>
+                                    <!-- /.departRetFlight -->
+                                    <input type="text" name="start" id="departFlightS" class="departInFlight"
+                                        autocomplete="off" placeholder="Depart">
                                     <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
                                             d="M11 11H7v4h4v-4zm5-9v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-1V2h-2zm3 18H5V9h14v11z">
                                         </path>
                                     </svg>
-                                    <input type="text" name="returnFlights" id="returnFlights" autocomplete="off">
-                                </div>
-                                <!-- / .mainSearch fourthFlight-->
+                                </dib>
+                                <!-- /.departRetFlightLab  -->
 
-                                <div class="mainSearch fourthFlight">
-                                    <label for="passengerFlights" class="passengerFlights">Passenger</label>
-                                    <input type="text" name="passengerFlights" id="passengerFlights" autocomplete="off">
+                                <div class="returnFlightLab">
+
+                                    <label for="returnFlight" class="returnFlight">Return</label>
+                                    <!-- /.returnFlight -->
+                                    <input type="text" name="end" id="returnFlight" class="returnInFlight"
+                                        autocomplete="off" placeholder="Return">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M11 11H7v4h4v-4zm5-9v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-1V2h-2zm3 18H5V9h14v11z">
+                                        </path>
+                                    </svg>
                                 </div>
-                                <!-- / .mainSearch fourthFlight-->
+                                <!-- /.returnFlightLab -->
+
                             </div>
-                            <!-- /.secondCol -->
-                            <!-- /.toggleInput -->
-                            <div class="tglDiv">
-                                <button class="searchBtn">Search flights</button>
-                                <div class="tglInput">
+                            <!-- /.thirdFlightGroup -->
+
+                            <div class="flightBtnRet">
+                                <a href="javascript:void(0);" id="flightBtnRet" class="flSbtn"> Search flights</a>
+                                <div class="tglInputRet">
                                     <svg x="0px" y="0px" viewBox="0 0 23.6 23.6">
                                         <g>
                                             <path d="M10.8,10.1C12.3,9.4,13.6,8.7,15,8c-0.6-0.7-1-1.4-1.6-2c-0.2-0.2-0.6-0.3-0.8-0.3c-0.6,0-1.1,0.1-1.7,0.1
         c-0.1-0.1-0.1-0.2-0.2-0.2C11,5.4,11.1,5.1,11.4,5c1.2-0.4,1.9-1.2,2.4-2.4c0.1-0.2,0.4-0.4,0.8-0.6c-0.8,2.3,0.5,3.3,2.2,4.2
         c0.7-1.3,1.4-2.7,2.1-4.1c0.8,0.4,1.1,1,0.9,1.9c-0.3,1.3-0.6,2.6-0.7,3.9c0,0.4,0.1,0.8,0.4,1.1c0.5,0.6,1.1,1.1,1.6,1.7
         c0.5,0.5,0.7,1,0.2,1.6c-0.5,0.5-1.2,0.4-1.5-0.1c-1.4-2.2-3.3-2.3-5.5-1.5c-0.4,0.1-0.9,0.2-1.3,0.3
-        C11.6,11.2,11.6,11.2,10.8,10.1z" />
+        C11.6,11.2,11.6,11.2,10.8,10.1z"></path>
                                             <path d="M6.9,17.1c-0.7,1.4-1.4,2.8-2.1,4.2c-0.8-0.4-1.1-0.9-0.9-1.8c0.4-1.3,0.6-2.7,0.8-4.1c0-0.3-0.1-0.7-0.3-0.9
         c-0.5-0.6-1.2-1.2-1.7-1.8c-0.5-0.5-0.7-1-0.1-1.6c0.5-0.5,1.1-0.3,1.6,0.2c0.7,0.7,1.4,1.7,2.3,2c0.9,0.3,2-0.3,3-0.4
         c0.5-0.1,1-0.2,1.5-0.3c0.8-0.3,1.4,0,1.9,0.8c-1.3,0.7-2.7,1.4-4.2,2.1c0.6,0.7,1,1.7,1.7,2.1c0.6,0.4,1.6,0.2,2.7,0.2
         c-0.3,0.3-0.4,0.6-0.6,0.7c-1.2,0.4-2,1.2-2.4,2.4c-0.1,0.2-0.4,0.4-0.7,0.7c-0.1-1.1,0.1-2.1-0.2-2.8C8.6,18.1,7.6,17.7,6.9,17.1z
-        " />
+        "></path>
                                             <path d="M15.6,18.2c1.7,0.1,2.8-1.1,2.9-2.7c0-0.3,0.2-0.6,0.3-0.9c0.1,0.3,0.4,0.6,0.4,0.9c0.1,1.9-1.5,3.6-3.5,3.5
-        c-0.3,0-0.6-0.3-0.9-0.4C15,18.5,15.3,18.4,15.6,18.2z" />
+        c-0.3,0-0.6-0.3-0.9-0.4C15,18.5,15.3,18.4,15.6,18.2z"></path>
                                             <path d="M4.3,7.8c0.2-2.1,1.9-3.7,3.9-3.5c0.2,0,0.4,0.3,0.6,0.4C8.6,4.9,8.4,5,8.2,5.1c-1.9,0.1-3,1.1-3,2.8
-        c0,0.3-0.2,0.6-0.3,0.9C4.6,8.4,4.4,8.1,4.3,7.8z" />
+        c0,0.3-0.2,0.6-0.3,0.9C4.6,8.4,4.4,8.1,4.3,7.8z"></path>
                                         </g>
                                     </svg>
-                                    <div class="tglText">Return</div>
+                                    <div class="tglTextRet">Return</div>
 
                                     <input type="checkbox" name="" id="changeReturn">
                                 </div>
-                                <!-- /.tglInput  -->
                             </div>
-                            <!-- /.buttonDiv -->
-                        </form>
-                        <!-- /.searchFomr -->
+                            <!-- /.flightBtnRet -->
 
 
-                        <!-- <input type="text" name="daterange" value=""> -->
 
-                    </div>
 
-                    <!-- /.searchTicket -->
+
+
+                        </div>
+                        <!-- /.mainForm -->
+
+
+                    </section>
+
                 </section>
                 <!-- /. SectionFlights -->
+
 
                 <!-- Hotels Section -->
                 <section class="hotels">
@@ -490,40 +571,81 @@
                     </div>
                     <!-- /.buttons -->
 
-                    <div class="hotelSearch">
-                        <div class="mainForm">
+                    <!-- Hotel Search Section -->
 
+                    <section class="hotelSearch">
+
+                        <div class="mainForm">
+                            <div class="hotelGroup1" id="checkIn">
+
+
+
+                                <div class="checkIn">
+                                    <label for="checkIn" class="checkInLab">
+                                        Check in
+                                    </label>
+                                    <!-- /.checkLab -->
+                                    <input type="text" id="checkIn" name="start" class="checkInId" autocomplete="off"
+                                        placeholder="Check in">
+                                </div>
+                                <!-- /.checkin -->
+
+
+                                <div class="checkOut">
+                                    <label for="checkOut" class="checkOutLab">Check out</label>
+                                    <!-- /.checkLab -->
+                                    <input type="text" id="checkOut" name="end" class="checkOutId" autocomplete="off"
+                                        placeholder="Check out">
+                                </div>
+                                <!-- /.checkOut -->
+
+
+                            </div>
+                            <!-- /.hotelGroup1 -->
+
+
+                            <div class="hotelGroup2">
+
+
+                                <div class="destination">
+                                    <label for="destination" class="desLab">Location</label>
+                                    <!-- /.desLab -->
+                                    <input type="text" name="destination" id="destination" autocomplete="off"
+                                        placeholder="Location">
+                                </div>
+                                <!-- /.destionation -->
+
+                                <div class="guests">
+                                    <label for="guests" class="guestsLab">Guests</label>
+                                    <!-- /.guestsLab -->
+                                    <input type="text" name="guests" id="guests" autocomplete="off"
+                                        placeholder="Guests">
+                                </div>
+                                <!-- /.guests -->
+
+
+                            </div>
+                            <!-- /.hotelGroup2 -->
+
+
+                            <div class="hotelBtn">
+                                <button id="hotelBtn">Find Hotels</button>
+                            </div>
+                            <!-- /.hotelBtn -->
+
+                            <!-- /.mainForm -->
                         </div>
-                        <!-- /.mainForm -->
-                    </div>
-                    <!-- /.hotelSearch -->
-                </section>
-                <!-- /.hotels -->
+                        <!-- /.hotelSearch -->
+                    </section>
+                    <!-- /.hotels -->
             </div>
         </section>
 
-        <section class="imgSection">
+        <!-- Space Section -->
+        <section class="imgSection secondImgSec">
 
         </section>
-
-
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- FOOTER -->
@@ -575,15 +697,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- DatePicker JS -->
-    <script src="./assets/plugins/datepicker/moment.min.js"></script>
-    <script src="./assets/plugins/datepicker/daterangepicker.js"></script>
+    <script src="./assets/plugins/datepickers/datepicker-full.min.js"></script>
 
 
     <!-- JavaScript -->
     <script src="./assets/js/animation.js"></script>
-    <script src="./assets/js/flights/datePciker.js"></script>
-    <script src="./assets/js/flights/focus.js"></script>
+    <script src="./assets/js/datePciker.js"></script>
+    <!-- <script src="./assets/js/flights/focus.js"></script> -->
+
+
     <script src="./assets/js/flights/flights.js"></script>
+    <!-- <script src="./assets/js/flights/flying.js"></script> -->
+    <script src="./assets/js/hotel/hotel.js"></script>
 
 </body>
 

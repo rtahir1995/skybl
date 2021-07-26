@@ -27,6 +27,8 @@ function label () {
     }
 }
 
+
+/*
 $('.mainSearch').find('input').on('input', function() {
     label() 
     // console.log('ff')
@@ -82,3 +84,5 @@ $('.directionChange').on('click', function() {
     $('#fromFlights').val(b);
     $('#toFlights').val(a);
 })
+
+*/

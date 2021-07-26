@@ -9,9 +9,9 @@ $('#passengerFlights').on('input', function() {
 var d = []
 
 $.ajax({
-    url: './assets/js/flights/airports.json',
+    url: '/assets/js/flights/airports.json',
     method: 'GET',
-    // dataType: 'json'
+    dataType: 'json'
 }).done(function (response) {
     
     // Name of Airports
@@ -34,7 +34,7 @@ $.ajax({
     ('error')
 });
 
-(d)
+
 
 
 
@@ -147,32 +147,287 @@ function autocomplete(inp, arr) {
 var countries = d;
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.getElementById("fromFlights"), countries);
-autocomplete(document.getElementById("toFlights"), countries);
+autocomplete(document.getElementById("fromFlight"), countries);
+autocomplete(document.getElementById("toFlight"), countries);
 
 
 
 
+// Focus Animation
+
+// FLight Change 
+
+$('.tglInput').on('change', function(){
+    $('.secondFlightGroup').fadeToggle('slow', function() {
+        $('.thirdFlightGroup').fadeToggle('slow');
+        $('.thirdFlightGroup').css({
+            display: 'flex'
+        });
+        $('.flightBtnRet').fadeToggle('slow');
+        $('.flightBtnRet').css({
+            display: 'flex'
+        });
+        $('.flightBtnRet').find('#changeReturn').prop('checked', true);
+    });
+})
 
 
+$('.tglInputRet').on('change', function(){
+    $('.thirdFlightGroup').fadeToggle('slow', function() {
+        $('.flightBtnRet').fadeToggle('slow');
+        $('.flightBtnRet').css({
+            display: 'none'
+        });
+        $('.secondFlightGroup').fadeToggle('slow');
+        $('.secondFlightGroup').css({
+            display: 'flex'
+        });
+        $('.flightBtn').find('#changeReturn').prop('checked', false);
+    });
+})
 
+// Focus Animation
 
+$('input').focusin( function () {
+    let a = $(this).attr('type');
+    let b = $(this).attr('id');
+    if (a === 'text') {
+        $(this).animate({
+            paddingTop: '20px'
+        }, 100);
 
+        $(this).siblings('label').animate({
+            opacity: '1'
+        });
+    };
+});
 
+$('input').focusout( function () {
+    let a = $(this).attr('type');
+    let b = $(this).attr('id');
+    if (a === 'text') {
+        $(this).animate({
+            paddingTop: '0px'
+        }, 100);
     
-    var fromVal = '';
-    var toflVal = '';
+        $(this).siblings('label').animate({
+            opacity: '0'
+        });
+    };  
+});
 
-var toFlightCode = function() {
-    let x = $('#toFlights').val();
+
+// $('.buttons')
+// $('.description')
+// $('.imgSection')
+// $('.tglInput')
+// $('.tglInputRet')
+
+
+$('.logoSVG').on('click', function() {
+    $('.buttons').toggle('slow');
+    $('.description').toggle('slow');
+    $('.secondImgSec').toggle('slow');
+    $('.tglInput').toggle('slow');
+    $('.tglInputRet').toggle('slow');
+
+    $('.flightSearch').css({
+        marginTop: '20px'
+    });
+})
+
+
+// Search Function
+
+
+var fromVal = '';
+var toflVal = '';
+
+
+function toFlightCode () {
+
+    let x = $('#toFlight').val();
     let z = x.split('(');
     let g = z[1].split(')');
     toflVal = g[0];
-}
 
-var fromFlightCode = function() {
-    let x = $('#fromFlights').val();
+};
+
+function fromFlightCode () {
+
+    let x = $('#fromFlight').val();
     let z = x.split('(');
     let g = z[1].split(')');
-    toflVal = g[0];
-}
+    fromVal = g[0];
+
+};
+
+var fromInputVal = '';
+var toInputVal = '';
+var departInputVal = '';
+var departInputValS = '';
+var returnInputVal = '';
+var forReturn = false;
+
+var correctFrom = false;
+var correctTo = false;
+var correctDepart = false;
+var correctDepartS = false;
+var correctReturn = false;
+var correctDate = false;
+
+
+function checkInput () {
+    fromInputVal = $('#fromFlight').val();
+    toInputVal = $('#toFlight').val();
+    departInputVal = $('#departFlight').val();
+    departInputValS = $('#departFlightS').val();
+    returnInputVal= $('.returnInFlight').val();
+    forReturn = $('.flightBtn').find('#changeReturn').prop('checked');
+};
+
+
+
+
+$('.flSbtn').on('click', function() {
+
+    checkInput();
+
+    for (let i = 0; i < d.length; i++) {
+        if (fromInputVal === d[i]) {
+            correctFrom = true;
+            break
+        } else {
+            correctFrom = false;
+        };
+    };
+
+    for (let i = 0; i < d.length; i++) {
+        if (toInputVal === d[i]) {
+            correctTo = true;
+            break
+        } else {
+            correctTo = false;
+        };
+    };
+
+    function isValidDate(dateString) {
+        var regEx = /^\d{4}-\d{2}-\d{2}$/;
+        if (!dateString.match(regEx)) return false; // Invalid format
+        var d = new Date(dateString);
+        var dNum = d.getTime();
+        if (!dNum && dNum !== 0) return false; // NaN value, Invalid date
+        return d.toISOString().slice(0, 10) === dateString;
+    }
+
+    correctDepart = isValidDate(departInputVal);
+    correctDepartS = isValidDate(departInputValS);
+    correctReturn = isValidDate(returnInputVal);
+
+    if (forReturn === false) {
+        correctDate= true;
+    } else if (forReturn === true) {
+        if (correctDepartS === true && correctReturn === true) {
+            correctDate = true;
+        } else {
+            correctDate = false;
+        };
+    } else {
+        correctDate = false;
+    }
+
+
+
+    if (correctFrom === true && correctTo === true && correctDate === true) {
+        fromFlightCode();
+        toFlightCode();
+    
+
+        var departDateA = '';
+        var returnDateA = '';
+
+        if (forReturn === false) {
+            departDateA = departInputVal;
+            returnDateA = departInputVal;
+        } else if (forReturn === true) {
+            departDateA = departInputValS;
+            returnDateA = returnInputVal;
+        }
+
+        console.log(departDateA, returnDateA)
+        
+        var origin = fromVal; // From Flight
+        var destination = toflVal; // To Flight
+        var departDate = departDateA;  // Depart Date
+        var returnDate = returnDateA;  // Return Date
+
+        
+        var priceSky = [];  // Ticket price
+        var airlineSky = [];  // Airlines Name
+        var flightNumbSky = [];  // FLight Number
+        var departTimeSky = [];  // Ticket Depart Time
+        var returnTimeSky = []; // Ticket Return Time
+        var transferSky = []; // Transfer Count
+    
+        
+    
+        console.log(`Destination: ${destination}, Origin: ${origin}, DepartDate: ${departDate}, ReturnDate: ${returnDate}`)
+    
+    
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": `https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/prices/calendar?calendar_type=departure_date&destination=${destination}&origin=${origin}&depart_date=${departDate}&currency=USD&return_date=${returnDate}`,
+            "method": "GET",
+            "headers": {
+                "x-access-token": "930f0773b8a3fcb14e981425518dfd33",
+                "x-rapidapi-key": "5bbf7e83aamshe586a065f7fe016p1a7671jsn0c05b2cc2ccd",
+                "x-rapidapi-host": "travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com"
+            }
+        };
+        
+        $.ajax(settings).done(function (response) {
+        
+            (function getKeyValueFromJSON() {
+                console.log(response)
+            
+                for (var val in response.data) {
+    
+                
+                    priceSky.push(response.data[val].price)
+                    airlineSky.push(response.data[val].airline)
+                    flightNumbSky.push(response.data[val].flight_number)
+                    departTimeSky.push(response.data[val].departure_at)
+                    returnTimeSky.push(response.data[val].return_at)
+                    transferSky.push(response.data[val].transfer)
+                
+    
+                
+                };
+    
+        })();
+        
+        console.log(`Price: ${priceSky}, airline: ${airlineSky}, flight: ${flightNumbSky}`);
+        
+        
+        
+            
+        });
+    }
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+

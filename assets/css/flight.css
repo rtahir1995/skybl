@@ -1,0 +1,994 @@
+label {
+    opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .mainDiv {
+        margin: 20px;
+    }
+
+    .mainFlightForm {
+        display: flex;
+        width: 100%;
+    }
+    /* Group */
+
+    .firstFlightGroup, .secondFlightGroup {
+        display: flex;
+        width: 100%;
+    }
+    
+    .thirdFlightGroup{
+        display: none;
+        width: 100%;
+    }
+
+    .flightBtnRet {
+        display: none;
+    }
+    /* From Flights */
+    
+    .fromFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: #fff;
+    }
+    
+    .fromFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #fromFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    
+    /* To Flights  */
+    
+    .toFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .toFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #toFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 20px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Depart Flight  */
+    
+    .departFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .departFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #departFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+
+    /* Depart Flight with Return */
+
+    .departRetFlightLab {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .departRetFlight {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .departInFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    
+    /* Return Flight  */
+    
+    .returnFlightLab {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .returnFlight {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .returnInFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Flights Button */
+    
+    .flightBtn {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #flightBtn{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 14px;
+        text-decoration: none;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #flightBtn:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
+    
+
+    /* Return Flight Button */
+    .flightBtnRet {
+        position: relative;
+        width: 150px;
+        height: 60px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #flightBtnRet {
+        display: inline-block;
+        width: 150px;
+        height: 100%;
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 14px;
+        text-decoration: none;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #flightBtnRet:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
+
+    
+    /* Direction Change Button */
+    
+    .directionChange {
+        position: absolute;
+        top: 18px;
+        left: -14px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        background-color: white;
+        border: 2px solid #DB6E00;
+    }
+    
+    
+    .directionChange:hover {
+        top: 16px;
+        left: -16px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease;
+    }
+
+    
+    .directionChange svg {
+        fill: #DB6E00;
+    }
+    
+    .svg1 {
+        transform: rotate(180deg);
+    }
+    
+    /* Date Svg */
+
+    .departFlight svg {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        fill: #DB6E00;
+    }
+
+    
+    .thirdFlightGroup svg {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        fill: #DB6E00;
+    }
+
+    /* Return ChecBox */
+
+    .tglInput {
+        position: absolute;
+        bottom: -50px;
+        right: 0;    
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInput svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglText {
+        margin: 5px;
+    }
+
+
+    /* Return ChecBox with return button*/
+
+    .tglInputRet {
+        position: absolute;
+        bottom: -50px;
+        right: 0;     
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInputRet svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglTextRet {
+        margin: 5px;
+    }
+
+}
+
+@media  screen and (min-width: 426px) and (max-width: 1023px) {
+
+    .mainDiv {
+        max-width: none;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .mainFlightForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Group */
+
+    .firstFlightGroup, .secondFlightGroup, .thirdFlightGroup {
+        display: flex;
+        width: 100%;
+    }
+    
+    .secondFlightGroup {
+        margin-top: 3px;
+        margin-top: 3px;
+    }
+
+    .thirdFlightGroup{
+        display: none;
+        margin-top: 3px;
+    }
+
+    .flightBtnRet {
+        display: none;
+    }
+    /* From Flights */
+    
+    .fromFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        border-top-left-radius: 10px;
+        background-color: #fff;
+    }
+    
+    .fromFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #fromFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border-top-left-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    
+    /* To Flights  */
+    
+    .toFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        border-top-right-radius: 10px;
+        background-color: #fff;
+    }
+    
+    .toFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #toFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 20px;
+        border-top-right-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Depart Flight  */
+    
+    .departFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        border-bottom-left-radius: 10px;
+        background-color: #fff;
+    }
+    
+    .departFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #departFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border-bottom-left-radius: 10px;
+        border: none;
+        outline: none;
+    }
+
+    /* Depart Flight with Return */
+
+    .departRetFlightLab {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .departRetFlight {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .departInFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    
+    /* Return Flight  */
+    
+    .returnFlightLab {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #fff;
+    }
+    
+    .returnFlight {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .returnInFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Flights Button */
+    
+    .flightBtn {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #flightBtn{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1.3rem;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #flightBtn:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
+    
+
+    /* Return Flight Button */
+    .flightBtnRet {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-top: 3px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #flightBtnRet {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 14px;
+        text-decoration: none;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #flightBtnRet:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
+
+    
+    /* Direction Change Button */
+    
+    .directionChange {
+        position: absolute;
+        top: 18px;
+        left: -14px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        background-color: white;
+        border: 2px solid #DB6E00;
+    }
+    
+    
+    .directionChange:hover {
+        top: 16px;
+        left: -16px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease;
+    }
+
+    
+    .directionChange svg {
+        fill: #DB6E00;
+    }
+    
+    .svg1 {
+        transform: rotate(180deg);
+    }
+    
+    /* Date Svg */
+
+    .departFlight svg {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        fill: #DB6E00;
+    }
+
+    
+    .thirdFlightGroup svg {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        fill: #DB6E00;
+    }
+
+    /* Return ChecBox */
+
+    .tglInput {
+        position: absolute;
+        bottom: -50px;
+        right: 0;    
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInput svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglText {
+        margin: 5px;
+    }
+
+
+    /* Return ChecBox with return button*/
+
+    .tglInputRet {
+        position: absolute;
+        bottom: -50px;
+        right: 0;     
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInputRet svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglTextRet {
+        margin: 5px;
+    }
+}
+
+@media  screen and (max-width: 425px) { 
+    .mainDiv {
+        max-width: none;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .mainFlightForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Group */
+
+    .firstFlightGroup, .secondFlightGroup, .thirdFlightGroup {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .secondFlightGroup {
+        margin-top: 3px;
+    }
+
+    .thirdFlightGroup{
+        display: none;
+    }
+
+    .flightBtnRet {
+        display: none;
+    }
+    /* From Flights */
+    
+    .fromFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #fff;
+    }
+    
+    .fromFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #fromFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    
+    /* To Flights  */
+    
+    .toFlight {
+        position: relative;
+        margin-top: 3px;
+        width: 100%;
+        height: 60px;
+        background-color: #fff;
+    }
+    
+    .toFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #toFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 20px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Depart Flight  */
+    
+    .departFlight {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .departFlightLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #departFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+
+    /* Depart Flight with Return */
+
+    .departRetFlightLab {
+        position: relative;
+        margin-top: 3px;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .departRetFlight {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .departInFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    
+    /* Return Flight  */
+    
+    .returnFlightLab {
+        position: relative;
+        margin-top: 3px;
+        width: 100%;
+        height: 60px;
+        margin-right: 2px;
+        background-color: #fff;
+    }
+    
+    .returnFlight {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .returnInFlight {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Flights Button */
+    
+    .flightBtn {
+        position: relative;
+        margin-top: 3px;
+        width: 100%;
+        height: 60px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    #flightBtn{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1.3rem;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    #flightBtn:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
+    
+
+    /* Return Flight Button */
+    .flightBtnRet {
+        position: relative;
+        margin-top: 3px;
+        width: 100%;
+        height: 60px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #flightBtnRet {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 14px;
+        text-decoration: none;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #flightBtnRet:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
+
+    
+    /* Direction Change Button */
+    
+    .directionChange {
+        position: absolute;
+        top: -14px;
+        left: 45%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        background-color: white;
+        border: 3px solid #DB6E00;
+    }
+    
+    
+    .directionChange:hover {
+        top: -15px;
+        left: 46%;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease;
+    }
+
+    
+    .directionChange svg {
+        fill: #DB6E00;
+    }
+    
+    .svg1 {
+        transform: rotate(180deg);
+    }
+    
+    /* Date Svg */
+
+    .departFlight svg {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        fill: #DB6E00;
+    }
+
+    
+    .thirdFlightGroup svg {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        fill: #DB6E00;
+    }
+
+    /* Return ChecBox */
+
+    .tglInput {
+        position: absolute;
+        bottom: -50px;
+        right: 0;    
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInput svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglText {
+        margin: 5px;
+    }
+
+
+    /* Return ChecBox with return button*/
+
+    .tglInputRet {
+        position: absolute;
+        bottom: -50px;
+        right: 0;     
+        display: flex;
+        align-items: center;
+    }
+    
+    .tglInputRet svg {
+        height: 20px;
+        fill: #fff;
+    }
+    .tglTextRet {
+        margin: 5px;
+    }
+}

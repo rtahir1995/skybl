@@ -119,6 +119,8 @@ form {
 
     .searchForm button:hover {
         background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     .return {
@@ -324,6 +326,8 @@ form {
 
     .searchForm button:hover {
         background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     .return {
@@ -523,6 +527,8 @@ form {
 
     .searchForm button:hover {
         background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
     }
 
     .return {

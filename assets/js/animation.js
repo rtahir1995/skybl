@@ -34,13 +34,11 @@ $('.searchBtn').on('click', function(e) {
 $('.navOpen').on('click', function () {
     $('.navOpen').hide(500);
     $('.navClose').show(500);
-    $('.navigationMob').show(500)
 });
 
 function Closed  () {
     $('.navClose').hide(500);
     $('.navOpen').show(500);
-    $('.navigationMob').hide(500)
 }
 
 $('.navClose').on('click', function() {
@@ -63,6 +61,34 @@ $('.logInPage').on('click', function(event) {
 });
 
 
+// Navigation
+
+// Tab
+
+function openTabNav() {
+    document.getElementById("myTabSidenav").style.width = "300px";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeTabNav() {
+    document.getElementById("myTabSidenav").style.width = "0";
+    // document.body.style.backgroundColor = "white";
+}
+
+
+
+// Mobile
+function openMobNav() {
+    document.getElementById("myMobSidenav").style.width = "100%";
+}
+
+function closeMobNav() {
+    document.getElementById("myMobSidenav").style.width = "0";
+}
+
+
+
+
 // Section Change
 
 $('.deactiveHotel').on('click', function () {
@@ -77,18 +103,3 @@ $('.deactiveFlights').on('click', function () {
     });
 });
 
-
-// FLight Change 
-
-$('.tglInput').on('change', function(){
-    let a =  $("#changeReturn").is(":checked");
-    if (a === true) {
-        $('.thirdFlight').fadeToggle('slow', function() {
-            $('.fifthFlight').fadeToggle('slow');
-        });
-    } else if (a !== true) {
-        $('.fifthFlight').fadeToggle('slow', function() {
-            $('.thirdFlight').fadeToggle('slow');
-        });
-    }
-})

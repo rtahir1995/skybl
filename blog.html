@@ -28,13 +28,27 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Google fonts -->
+    <!-- Comfortaa -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+
+    <!-- Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- DatePicker CSS -->
+    <link rel="stylesheet" href="./assets/plugins/datepicker/daterangepicker.css">
+
+
+
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./assets/css/pupup.css">
     <link rel="stylesheet" href="./assets/css/blog.css">
 
@@ -42,6 +56,7 @@
 </head>
 
 <body>
+
 
     <!-- PUPUP -->
 
@@ -104,7 +119,7 @@
                                     </div>
                                     <!-- /.inputName -->
                                     <label for="email" class="email">
-                                        <input type="email" name="email" id="email">
+                                        <input type="email" name="email" id="email" autocomplete="off">
                                     </label>
                                     <!-- /.email -->
                                 </div>
@@ -122,7 +137,7 @@
                                     </div>
                                     <!-- /.inputName -->
                                     <label for="password" class="password">
-                                        <input type="password" name="password" id="password">
+                                        <input type="password" name="password" id="password" autocomplete="off">
                                     </label>
                                     <!-- /.password -->
                                 </div>
@@ -148,6 +163,9 @@
 
     </section>
     <!-- /.pupupSection -->
+
+
+
 
     <!-- HEADER -->
 
@@ -208,10 +226,10 @@
 
             <div class="navigation">
                 <nav>
-                    <a href="./index.html">
+                    <a href="./index.html" class="activeNav">
                         <div class="navItem">HOME</div>
                     </a>
-                    <a href="./blog.html" class="activeNav">
+                    <a href="./blog.html">
                         <div class="navItem">BLOG</div>
                     </a>
                     <a href="./companion.html">
@@ -234,11 +252,10 @@
             </div>
             <!-- /.signUpDiv -->
 
-            <!-- Mobile NAV Open -->
-
-            <div class="mobileNav">
+            <!-- Tab NAV Open -->
+            <div class="tabNav">
                 <div class="navOpen">
-                    <a href="#" class="mobileNav">
+                    <a href="javascript:void(0)" class="tabNav" onclick='openTabNav()'>
                         <svg viewBox="0 0 122.88 95.95">
                             <g>
                                 <path class="st0"
@@ -249,7 +266,7 @@
                 </div>
                 <!-- /.navOpen -->
                 <div class="navClose">
-                    <a href="#" class="mobileNav">
+                    <a href="javascript:void(0)" class="tabNav" onclick='closeTabNav()'>
                         <svg viewBox="0 0 55 45">
                             <path
                                 d="M18,25.14c-1.66-1.65-3.28-3.24-4.89-4.85-3-3-6-6-9-9A5,5,0,0,1,2.43,6.65a4.87,4.87,0,0,1,3.33-4,4.41,4.41,0,0,1,4.89,1q6.83,6.7,13.6,13.47a11.29,11.29,0,0,1,.83,1c2.66-2.67,5.15-5.2,7.67-7.71C35,8.14,37.38,5.91,39.65,3.6a5,5,0,0,1,7.86,1.77,4.36,4.36,0,0,1-.69,5.1c-2.94,3.06-5.92,6.07-8.91,9.09-1.84,1.86-3.71,3.69-5.76,5.73a8,8,0,0,1,1,.72c4.27,4.27,8.51,8.56,12.8,12.81A5.43,5.43,0,0,1,47.85,44c-.68,3.53-5.24,5.29-7.93,2.91-2.27-2-4.37-4.21-6.53-6.34-2.5-2.48-5-5-7.47-7.46-.24-.24-.49-.47-.94-.89a7.26,7.26,0,0,1-.69,1q-6.48,6.47-13,12.93a5.51,5.51,0,0,1-3,1.81A5.16,5.16,0,0,1,3,45.42a4.72,4.72,0,0,1,.53-5.65c2.95-3.1,6-6.11,9-9.15C14.33,28.81,16.14,27,18,25.14Z"
@@ -258,20 +275,43 @@
                     </a></div>
                 <!-- /.navClose -->
             </div>
-            <!-- /.mobileNav -->
+            <!-- /.tabNav -->
+
+            <!-- Mob NAV Open -->
+            <div class="mobNav">
+                <div class="navOpen">
+                    <a href="javascript:void(0)" class="mobNav" onclick='openMobNav()'>
+                        <svg viewBox="0 0 122.88 95.95">
+                            <g>
+                                <path class="st0"
+                                    d="M8.94,0h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,17.88,0,13.86,0,8.94l0,0 C0,4.02,4.02,0,8.94,0L8.94,0z M8.94,78.07h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105 C4.02,95.95,0,91.93,0,87.01l0,0C0,82.09,4.02,78.07,8.94,78.07L8.94,78.07z M8.94,39.03h105c4.92,0,8.94,4.02,8.94,8.94l0,0 c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,56.91,0,52.89,0,47.97l0,0C0,43.06,4.02,39.03,8.94,39.03L8.94,39.03z" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <!-- /.navOpen -->
+                <div class="navClose">
+                    <a href="javascript:void(0)" class="mobNav" onclick='closeMobNav()'>
+                        <svg viewBox="0 0 55 45">
+                            <path
+                                d="M18,25.14c-1.66-1.65-3.28-3.24-4.89-4.85-3-3-6-6-9-9A5,5,0,0,1,2.43,6.65a4.87,4.87,0,0,1,3.33-4,4.41,4.41,0,0,1,4.89,1q6.83,6.7,13.6,13.47a11.29,11.29,0,0,1,.83,1c2.66-2.67,5.15-5.2,7.67-7.71C35,8.14,37.38,5.91,39.65,3.6a5,5,0,0,1,7.86,1.77,4.36,4.36,0,0,1-.69,5.1c-2.94,3.06-5.92,6.07-8.91,9.09-1.84,1.86-3.71,3.69-5.76,5.73a8,8,0,0,1,1,.72c4.27,4.27,8.51,8.56,12.8,12.81A5.43,5.43,0,0,1,47.85,44c-.68,3.53-5.24,5.29-7.93,2.91-2.27-2-4.37-4.21-6.53-6.34-2.5-2.48-5-5-7.47-7.46-.24-.24-.49-.47-.94-.89a7.26,7.26,0,0,1-.69,1q-6.48,6.47-13,12.93a5.51,5.51,0,0,1-3,1.81A5.16,5.16,0,0,1,3,45.42a4.72,4.72,0,0,1,.53-5.65c2.95-3.1,6-6.11,9-9.15C14.33,28.81,16.14,27,18,25.14Z"
+                                transform="translate(-2.32 -2.31)" />
+                        </svg>
+                    </a></div>
+                <!-- /.navClose -->
+            </div>
+            <!-- /.mobNav -->
 
 
         </div>
         <!-- . / header-main -->
     </header>
 
-    <!-- Navigation fot Mobile and Tablet -->
-    <div class="navbar">
-        <div class="navigationMob">
-
-            <!-- Logo for Mobile S size -->
-            <div class="logInMob">
-                <a href="#" class="logInBtn">
+    <!-- Tab Nav -->
+    <div class="tabSideNav">
+        <div id="myTabSidenav" class="sidenav">
+            <div class="lBtn">
+                <a href="javascript:void(0)" class="logBtn">
                     <svg viewBox="0 0 20 20">
                         <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
                         <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
@@ -279,128 +319,168 @@
                     </svg>
                 </a>
             </div>
-            <!-- /.logInMob -->
-
-
-            <!-- Mobile Nav Link -->
-            <nav>
-                <a href="./index.html">
-                    <div class="navItem">HOME</div>
-                </a>
-                <a href="./blog.html" class="activeNav">
-                    <div class="navItem">BLOG</div>
-                </a>
-                <a href="./companion.html">
-                    <div class="navItem">COMPANION</div>
-                </a>
-            </nav>
-
-
+            <!-- /.lBtn -->
+            <a href="./">HOME</a>
+            <a href="./blog.html">BLOG</a>
+            <a href="./companion.html">COMPANION</a>
         </div>
-        <!-- /.navigationMob -->
     </div>
-    <!-- /.navbar -->
+    <!-- /.tabSideNav -->
+
+    <!-- Mobile Nav -->
+    <div class="mobileSideNav">
+        <div id="myMobSidenav" class="sidenav">
+            <div class="lBtn">
+                <a href="javascript:void(0)" class="logBtn">
+                    <svg viewBox="0 0 20 20">
+                        <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
+                        <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
+                        </polygon>
+                    </svg>
+                </a>
+            </div>
+            <!-- /.lBtn -->
+            <a href="./">HOME</a>
+            <a href="./blog.html">BLOG</a>
+            <a href="./companion.html">COMPANION</a>
+        </div>
+    </div>
+    <!-- /.mobileSideNav -->
 
 
     <!-- MAIN -->
     <main>
-        <section class="spaceSection">
-
-        </section>
         <div class="mainDiv">
-            <div class="post post1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sunt debitis illo
-                repellat
-                optio vel repellendus cupiditate ipsum ipsam amet? Recusandae ab soluta qui quo eligendi consequatur
-                reprehenderit maxime quae ipsam hic, asperiores eos eveniet sapiente? Officiis amet optio vel incidunt
-                quisquam molestias consectetur temporibus consequuntur vero impedit odio modi inventore cumque eligendi
-                ipsa
-                laboriosam, deserunt earum, facere repellendus aspernatur magni quae eos pariatur corrupti! Perspiciatis
-                enim, optio, beatae ipsa consequuntur, eveniet reiciendis voluptatem eum quibusdam totam libero eaque
-                consectetur!
+            <div class="post post1">
+                <div class="postHeader">
+                    <div class="name">
+                        <h2>Ayxan</h2>
+                    </div>
+                </div>
+                <!-- /.postHeader -->
+                <div class="postMain">
+                    <div class="postImage"></div>
+                    <!-- /.postImage -->
+                    <div class="postText">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti accusantium
+                        commodi architecto aperiam sequi consequatur ut beatae error aliquam molestiae voluptatibus rem,
+                        amet pariatur. Veritatis quasi qui blanditiis autem quisquam nisi distinctio asperiores magnam,
+                        mollitia numquam maiores nostrum eius molestiae labore placeat animi eligendi dignissimos quia
+                        hic eveniet aliquid provident. Deserunt temporibus ullam, ipsa at modi ab tempore ea laborum?
+                        Est explicabo, ratione hic aliquid voluptatibus temporibus, rerum distinctio libero placeat
+                        blanditiis, provident laborum consequatur? Officiis, fuga possimus. Nam doloremque asperiores
+                        laudantium voluptate quos doloribus neque deleniti omnis! Voluptate aliquam quibusdam voluptatum
+                        quo soluta sunt quam doloremque, quisquam in, perspiciatis repellendus ullam velit. Aperiam ut
+                        neque numquam ad mollitia sequi sit iure error, veritatis optio similique quia aspernatur, nemo
+                        ex dignissimos officiis debitis? Rerum optio quibusdam eligendi nesciunt quod dolorem minima
+                        eos, ut iure nisi quos, pariatur accusamus nam assumenda voluptatem itaque repudiandae facere
+                        harum magnam culpa, sed numquam voluptas! Laudantium commodi blanditiis necessitatibus explicabo
+                        voluptatibus iste nisi dolore eaque, eligendi quia repudiandae animi placeat praesentium
+                        temporibus officiis nobis odio sequi! Fugiat et odio eius unde voluptas, omnis quibusdam
+                        adipisci animi aspernatur itaque, similique obcaecati facere id impedit nisi illo laboriosam
+                        ratione consequuntur ipsum voluptatibus sit temporibus neque. Explicabo?
+                    </div>
+                </div>
+                <!-- /.postMain -->
+                <div class="postFooter"></div>
+                <!-- /.postFooter -->
+
             </div>
-            <div class="post post2">Tempora possimus quis cumque ipsum eveniet praesentium similique laborum omnis
-                expedita
-                quos
-                eligendi maiores temporibus aliquam consequatur natus repellendus dolores veniam, voluptates corporis
-                excepturi sed asperiores ex deserunt harum? Porro, amet? Iure obcaecati cupiditate accusamus aliquid
-                labore
-                placeat a adipisci. Id ipsam recusandae doloremque a, suscipit illum blanditiis quia, asperiores, in
-                accusantium consectetur sed voluptates amet! Architecto minus eveniet assumenda, commodi neque nam iure
-                nisi
-                inventore impedit corporis placeat quaerat, eum nemo ex. Eos vitae quo, quos excepturi quasi voluptas?
+            <div class="post post2">
+                <div class="postHeader">
+
+                </div>
+                <!-- /.postHeader -->
+                <div class="postMain">
+
+                    <div class="postText">
+                        <div class="postImage"></div>
+                        <!-- /.postImage -->
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti accusantium
+                        commodi architecto aperiam sequi consequatur ut beatae error aliquam molestiae voluptatibus rem,
+                        amet pariatur. Veritatis quasi qui blanditiis autem quisquam nisi distinctio asperiores magnam,
+                        mollitia numquam maiores nostrum eius molestiae labore placeat animi eligendi dignissimos quia
+                        hic eveniet aliquid provident. Deserunt temporibus ullam, ipsa at modi ab tempore ea laborum?
+                        Est explicabo, ratione hic aliquid voluptatibus temporibus, rerum distinctio libero placeat
+                        blanditiis, provident laborum consequatur? Officiis, fuga possimus. Nam doloremque asperiores
+                        laudantium voluptate quos doloribus neque deleniti omnis! Voluptate aliquam quibusdam voluptatum
+                        quo soluta sunt quam doloremque, quisquam in, perspiciatis repellendus ullam velit. Aperiam ut
+                        neque numquam ad mollitia sequi sit iure error, veritatis optio similique quia aspernatur, nemo
+                        ex dignissimos officiis debitis? Rerum optio quibusdam eligendi nesciunt quod dolorem minima
+                        eos, ut iure nisi quos, pariatur accusamus nam assumenda voluptatem itaque repudiandae facere
+                        harum magnam culpa, sed numquam voluptas! Laudantium commodi blanditiis necessitatibus explicabo
+                        voluptatibus iste nisi dolore eaque, eligendi quia repudiandae animi placeat praesentium
+                        temporibus officiis nobis odio sequi! Fugiat et odio eius unde voluptas, omnis quibusdam
+                        adipisci animi aspernatur itaque, similique obcaecati facere id impedit nisi illo laboriosam
+                        ratione consequuntur ipsum voluptatibus sit temporibus neque. Explicabo?
+                    </div>
+                </div>
+                <!-- /.postMain -->
+                <div class="postFooter"></div>
+                <!-- /.postFooter -->
             </div>
-            <div class="post post3">Nam magni nihil porro fugiat debitis natus iste at error sunt eum id inventore odit
-                vero
-                ex
-                tenetur pariatur optio doloribus amet, voluptates a, odio explicabo voluptatum labore! Perferendis
-                exercitationem excepturi nemo dignissimos magnam fuga voluptates neque? Praesentium vitae vel aspernatur
-                dolorum labore nesciunt ut dolore blanditiis aperiam consectetur laudantium molestiae debitis ipsum
-                excepturi rem, repudiandae inventore atque omnis. Nulla voluptate quisquam nobis quo! Vero voluptatibus
-                exercitationem natus reprehenderit assumenda at, nihil voluptatem dignissimos deleniti numquam aliquam
-                quaerat modi quos!
+            <div class="post post3">
+                <div class="postHeader"></div>
+                <!-- /.postHeader -->
+                <div class="postMain">
+                    <div class="postImage"></div>
+                    <!-- /.postImage -->
+                    <div class="postText">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti accusantium
+                        commodi architecto aperiam sequi consequatur ut beatae error aliquam molestiae voluptatibus rem,
+                        amet pariatur. Veritatis quasi qui blanditiis autem quisquam nisi distinctio asperiores magnam,
+                        mollitia numquam maiores nostrum eius molestiae labore placeat animi eligendi dignissimos quia
+                        hic eveniet aliquid provident. Deserunt temporibus ullam, ipsa at modi ab tempore ea laborum?
+                        Est explicabo, ratione hic aliquid voluptatibus temporibus, rerum distinctio libero placeat
+                        blanditiis, provident laborum consequatur? Officiis, fuga possimus. Nam doloremque asperiores
+                        laudantium voluptate quos doloribus neque deleniti omnis! Voluptate aliquam quibusdam voluptatum
+                        quo soluta sunt quam doloremque, quisquam in, perspiciatis repellendus ullam velit. Aperiam ut
+                        neque numquam ad mollitia sequi sit iure error, veritatis optio similique quia aspernatur, nemo
+                        ex dignissimos officiis debitis? Rerum optio quibusdam eligendi nesciunt quod dolorem minima
+                        eos, ut iure nisi quos, pariatur accusamus nam assumenda voluptatem itaque repudiandae facere
+                        harum magnam culpa, sed numquam voluptas! Laudantium commodi blanditiis necessitatibus explicabo
+                        voluptatibus iste nisi dolore eaque, eligendi quia repudiandae animi placeat praesentium
+                        temporibus officiis nobis odio sequi! Fugiat et odio eius unde voluptas, omnis quibusdam
+                        adipisci animi aspernatur itaque, similique obcaecati facere id impedit nisi illo laboriosam
+                        ratione consequuntur ipsum voluptatibus sit temporibus neque. Explicabo?
+                    </div>
+                </div>
+                <!-- /.postMain -->
+                <div class="postFooter"></div>
+                <!-- /.postFooter -->
             </div>
-            <div class="post post4">Deserunt incidunt, fuga sit neque culpa temporibus dolorum vitae excepturi ipsa
-                quam.
-                Quasi
-                tempora quos unde? Quam libero distinctio consequuntur iusto eaque dignissimos corporis deserunt
-                perferendis
-                blanditiis. Tenetur, nihil nam? Similique soluta aliquid accusantium animi vel distinctio reiciendis
-                nostrum
-                non molestias tempore, cum quod quidem. Rem ut tempore voluptate aperiam similique ullam harum
-                distinctio
-                adipisci necessitatibus quos? Autem modi esse nemo suscipit dolor quia dolores itaque animi eaque
-                doloremque
-                iusto velit at, soluta fugit! Quia eum consequatur iusto quibusdam? Excepturi.
-            </div>
-            <div class="post post1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sunt debitis illo
-                repellat
-                optio vel repellendus cupiditate ipsum ipsam amet? Recusandae ab soluta qui quo eligendi consequatur
-                reprehenderit maxime quae ipsam hic, asperiores eos eveniet sapiente? Officiis amet optio vel incidunt
-                quisquam molestias consectetur temporibus consequuntur vero impedit odio modi inventore cumque eligendi
-                ipsa
-                laboriosam, deserunt earum, facere repellendus aspernatur magni quae eos pariatur corrupti! Perspiciatis
-                enim, optio, beatae ipsa consequuntur, eveniet reiciendis voluptatem eum quibusdam totam libero eaque
-                consectetur!
-            </div>
-            <div class="post post2">Tempora possimus quis cumque ipsum eveniet praesentium similique laborum omnis
-                expedita
-                quos
-                eligendi maiores temporibus aliquam consequatur natus repellendus dolores veniam, voluptates corporis
-                excepturi sed asperiores ex deserunt harum? Porro, amet? Iure obcaecati cupiditate accusamus aliquid
-                labore
-                placeat a adipisci. Id ipsam recusandae doloremque a, suscipit illum blanditiis quia, asperiores, in
-                accusantium consectetur sed voluptates amet! Architecto minus eveniet assumenda, commodi neque nam iure
-                nisi
-                inventore impedit corporis placeat quaerat, eum nemo ex. Eos vitae quo, quos excepturi quasi voluptas?
-            </div>
-            <div class="post post3">Nam magni nihil porro fugiat debitis natus iste at error sunt eum id inventore odit
-                vero
-                ex
-                tenetur pariatur optio doloribus amet, voluptates a, odio explicabo voluptatum labore! Perferendis
-                exercitationem excepturi nemo dignissimos magnam fuga voluptates neque? Praesentium vitae vel aspernatur
-                dolorum labore nesciunt ut dolore blanditiis aperiam consectetur laudantium molestiae debitis ipsum
-                excepturi rem, repudiandae inventore atque omnis. Nulla voluptate quisquam nobis quo! Vero voluptatibus
-                exercitationem natus reprehenderit assumenda at, nihil voluptatem dignissimos deleniti numquam aliquam
-                quaerat modi quos!
-            </div>
-            <div class="post post4">Deserunt incidunt, fuga sit neque culpa temporibus dolorum vitae excepturi ipsa
-                quam.
-                Quasi
-                tempora quos unde? Quam libero distinctio consequuntur iusto eaque dignissimos corporis deserunt
-                perferendis
-                blanditiis. Tenetur, nihil nam? Similique soluta aliquid accusantium animi vel distinctio reiciendis
-                nostrum
-                non molestias tempore, cum quod quidem. Rem ut tempore voluptate aperiam similique ullam harum
-                distinctio
-                adipisci necessitatibus quos? Autem modi esse nemo suscipit dolor quia dolores itaque animi eaque
-                doloremque
-                iusto velit at, soluta fugit! Quia eum consequatur iusto quibusdam? Excepturi.
+            <div class="post post4">
+                <div class="postHeader"></div>
+                <!-- /.postHeader -->
+                <div class="postMain">
+                    <div class="postImage"></div>
+                    <!-- /.postImage -->
+                    <div class="postText">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti accusantium
+                        commodi architecto aperiam sequi consequatur ut beatae error aliquam molestiae voluptatibus rem,
+                        amet pariatur. Veritatis quasi qui blanditiis autem quisquam nisi distinctio asperiores magnam,
+                        mollitia numquam maiores nostrum eius molestiae labore placeat animi eligendi dignissimos quia
+                        hic eveniet aliquid provident. Deserunt temporibus ullam, ipsa at modi ab tempore ea laborum?
+                        Est explicabo, ratione hic aliquid voluptatibus temporibus, rerum distinctio libero placeat
+                        blanditiis, provident laborum consequatur? Officiis, fuga possimus. Nam doloremque asperiores
+                        laudantium voluptate quos doloribus neque deleniti omnis! Voluptate aliquam quibusdam voluptatum
+                        quo soluta sunt quam doloremque, quisquam in, perspiciatis repellendus ullam velit. Aperiam ut
+                        neque numquam ad mollitia sequi sit iure error, veritatis optio similique quia aspernatur, nemo
+                        ex dignissimos officiis debitis? Rerum optio quibusdam eligendi nesciunt quod dolorem minima
+                        eos, ut iure nisi quos, pariatur accusamus nam assumenda voluptatem itaque repudiandae facere
+                        harum magnam culpa, sed numquam voluptas! Laudantium commodi blanditiis necessitatibus explicabo
+                        voluptatibus iste nisi dolore eaque, eligendi quia repudiandae animi placeat praesentium
+                        temporibus officiis nobis odio sequi! Fugiat et odio eius unde voluptas, omnis quibusdam
+                        adipisci animi aspernatur itaque, similique obcaecati facere id impedit nisi illo laboriosam
+                        ratione consequuntur ipsum voluptatibus sit temporibus neque. Explicabo?
+                    </div>
+                </div>
+                <!-- /.postMain -->
+                <div class="postFooter"></div>
+                <!-- /.postFooter -->
             </div>
         </div>
-        <section class="spaceSection">
-
-        </section>
-
+        <!-- /.mainDiv -->
 
     </main>
 
@@ -469,9 +549,15 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!-- DatePicker JS -->
+    <script src="./assets/plugins/datepicker/moment.min.js"></script>
+    <script src="./assets/plugins/datepicker/daterangepicker.js"></script>
+
+
     <!-- JavaScript -->
     <script src="./assets/js/animation.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/flights/flights.js"></script>
+    <script src="./assets/js/flights/flying.js"></script>
 
 </body>
 

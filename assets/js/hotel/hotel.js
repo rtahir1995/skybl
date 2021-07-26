@@ -1,0 +1,2 @@
+var loc = $('#destination').val();
+
