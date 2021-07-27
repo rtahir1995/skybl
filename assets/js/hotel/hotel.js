@@ -18,12 +18,12 @@ function checkHotelInfo () {
 
 $('.hotelBtn').on('click', function () {
     checkHotelInfo();
-    resultSearch();
     
     // console.log(`Location ${loc}, check in: ${checkIn}, check out ${checkOut}, Guests ${guests}`)
 
     if (loc !== '' && checkIn !== '' && checkOut !== '' && guests !== '') {
         console.log('click');
+        resultSearch();
         var settings = {
 
             "async": true,
@@ -59,7 +59,7 @@ $('.hotelBtn').on('click', function () {
                 // console.log(answer);
                 var results = answer.result
                 console.log(results.length)
-                for (let i = 0 ; i < 3; i ++) { //results.length
+                for (let i = 0 ; i < results.length; i ++) { //results.length
                     var hotelWebSite = results[i].url;
                     var hotelName = results[i].hotel_name_trans;
                     var priceCurrency = results[i].price_breakdown.currency;

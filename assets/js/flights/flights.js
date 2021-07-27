@@ -9,7 +9,7 @@ $('#passengerFlights').on('input', function() {
 var d = []
 
 $.ajax({
-    url: '/assets/js/flights/airports.json',
+    url: 'skybl/assets/js/flights/airports.json',
     method: 'GET',
     dataType: 'json'
 }).done(function (response) {
@@ -442,7 +442,7 @@ $('.flSbtn').on('click', function() {
 
         
         $.ajax({
-            url: '/assets/js/flights/airlines.json',
+            url: 'skybl/assets/js/flights/airlines.json',
             method: 'GET',
             dataType: 'json'
         }).done(function (response) {
