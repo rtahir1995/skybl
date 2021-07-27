@@ -52,15 +52,10 @@
 }
 
 .checkInId {
-    font-family: 'Concert One', cursive;
-    font-size: 14px;
     width: 100%;
     height: 100%;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 10px;
-    color: #5C2E00;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     border: none;
     outline: none;
 }
@@ -85,13 +80,10 @@
 }
 
 .checkOutId {
-    font-family: 'Concert One', cursive;
-    font-size: 14px;
     width: 100%;
     height: 100%;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 10px;
-    color: #5C2E00;
     border: none;
     outline: none;
 }
@@ -118,6 +110,8 @@
 #destination {
     width: 100%;
     height: 100%;
+    padding-top: 0px;
+    padding-left: 10px;
     border: none;
     outline: none;
 }
@@ -144,6 +138,8 @@
 #guests {
     width: 100%;
     height: 100%;
+    padding-top: 0px;
+    padding-left: 10px;
     border: none;
     outline: none;
 }
@@ -151,7 +147,7 @@
 /* Button */
 
 .hotelBtn {
-    width: 100%;
+    width: 150px;
     height: 60px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;

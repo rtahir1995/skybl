@@ -2,6 +2,7 @@ label {
     opacity: 0;
 }
 
+
 @media screen and (min-width: 1024px) {
     .mainDiv {
         margin: 20px;

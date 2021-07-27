@@ -1,0 +1,185 @@
+/* Fonts 'Dancing Script', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+.firstImgSec {
+    min-height: 80px;
+}
+
+
+
+.searchResult {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.hotelResBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.hotelRes {
+    display: flex;
+    width: 100%;
+    height: 136px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #C76300;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px -1px #000000;
+}
+
+
+.hotelResImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-right: 3px dashed #003580;
+    margin-right: 40px;
+}
+
+.hotelResImg svg {
+    fill: #fff;
+    margin: 0 30px;
+    height: 100px;
+}
+
+
+.hotelResImg svg:hover {
+    fill: #703800;
+}
+
+.hotelResText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 0 30px;
+
+}
+
+.hotelResName {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.hotelAdressGroup {
+    max-width: 180px;
+}
+
+.hotelResBook {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+
+.hotelResBook svg {
+    fill: #fff;
+}
+
+.blueSVG {
+    fill: #003580;
+}
+
+/* Check In / Checl Out */
+
+.hotelCheckGroup {
+    display: flex;
+    width: 100%;
+    max-width: 260px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotelResCheckOut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+}
+.hotelResCheckOut span {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #5C2E00;
+}
+
+.hotelResCheckIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    border-right: 2px solid #5C2E00;
+}
+.hotelResCheckIn span {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #5C2E00;
+}
+
+
+/* Reserve */
+.hotelResLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 130px;
+    height: 100%;
+    background-color: #003580;
+    box-shadow: 0px 0px 6px -1px #000000;
+    border-right: 3px dashed #fff;
+}
+
+.hotelResLink a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.hotelResCost {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 200px;
+    height: 100%;
+    font-size: 35px;
+}
+
+.hotelResPrice {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.hotelResPrice span {
+    margin-left: 5px;
+}

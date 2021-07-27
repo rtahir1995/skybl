@@ -9,7 +9,7 @@ $('#passengerFlights').on('input', function() {
 var d = []
 
 $.ajax({
-    url: '/skybl/assets/js/flights/airports.json',
+    url: '/assets/js/flights/airports.json',
     method: 'GET',
     dataType: 'json'
 }).done(function (response) {
@@ -222,19 +222,40 @@ $('input').focusout( function () {
 // $('.imgSection')
 // $('.tglInput')
 // $('.tglInputRet')
+var searchResult = false;
 
 
-$('.logoSVG').on('click', function() {
-    $('.buttons').toggle('slow');
-    $('.description').toggle('slow');
-    $('.secondImgSec').toggle('slow');
-    $('.tglInput').toggle('slow');
-    $('.tglInputRet').toggle('slow');
 
-    $('.flightSearch').css({
-        marginTop: '20px'
-    });
-})
+
+function  resultSearch () {
+    if (searchResult === false) {
+        // $('.firstImgSec').css({
+        //     minWidth: '100px'
+        // })
+        // $('.mainDiv').css({
+        //     background: '#C76300'
+        // });
+        searchResult = true;
+
+        $('.mainDiv').animate({
+            width: '100%',
+            maxWidth: 'none'
+        }, 'slow');
+        $('.buttons').toggle('slow');
+        $('.description').toggle('slow');
+        $('.tglInput').toggle('slow');
+        $('.tglInputRet').toggle('slow');
+        $('.searchResult').toggle('slow');
+
+        // $('.searchResult').h
+
+        $('.secondImgSec').animate({
+            flexGrow: '0'
+        }, 'slow');
+    };
+
+};
+
 
 
 // Search Function
@@ -318,7 +339,7 @@ $('.flSbtn').on('click', function() {
         var dNum = d.getTime();
         if (!dNum && dNum !== 0) return false; // NaN value, Invalid date
         return d.toISOString().slice(0, 10) === dateString;
-    }
+    };
 
     correctDepart = isValidDate(departInputVal);
     correctDepartS = isValidDate(departInputValS);
@@ -334,7 +355,7 @@ $('.flSbtn').on('click', function() {
         };
     } else {
         correctDate = false;
-    }
+    };
 
 
 
@@ -354,7 +375,18 @@ $('.flSbtn').on('click', function() {
             returnDateA = returnInputVal;
         }
 
-        console.log(departDateA, returnDateA)
+        // console.log(departDateA, returnDateA)
+        function takeTime (x) {
+            let retDate = [];
+            let separation  = x.split('T');
+            let date = separation[0];
+            retDate.push(date);
+            let separation2 = separation[1].split(':');
+            let time = `${separation2[0]}:${separation2[1]}`
+            retDate.push(time);
+            return retDate
+        };
+    
         
         var origin = fromVal; // From Flight
         var destination = toflVal; // To Flight
@@ -368,11 +400,11 @@ $('.flSbtn').on('click', function() {
         var departTimeSky = [];  // Ticket Depart Time
         var returnTimeSky = []; // Ticket Return Time
         var transferSky = []; // Transfer Count
-    
+        var flightLogo = []; //Airlines Logo
+
         
-    
-        console.log(`Destination: ${destination}, Origin: ${origin}, DepartDate: ${departDate}, ReturnDate: ${returnDate}`)
-    
+        
+        console.log(`Depart date ${departDate} Return date ${returnDate}`)
     
         var settings = {
             "async": true,
@@ -389,34 +421,112 @@ $('.flSbtn').on('click', function() {
         $.ajax(settings).done(function (response) {
         
             (function getKeyValueFromJSON() {
-                console.log(response)
+                // console.log(response)
             
                 for (var val in response.data) {
     
                 
-                    priceSky.push(response.data[val].price)
-                    airlineSky.push(response.data[val].airline)
-                    flightNumbSky.push(response.data[val].flight_number)
-                    departTimeSky.push(response.data[val].departure_at)
-                    returnTimeSky.push(response.data[val].return_at)
-                    transferSky.push(response.data[val].transfer)
+                    priceSky.push(response.data[val].price);
+                    airlineSky.push(response.data[val].airline);
+                    flightNumbSky.push(response.data[val].flight_number);
+                    let l = takeTime(response.data[val].departure_at);
+                    departTimeSky.push(l);
+                    let h = takeTime(response.data[val].return_at);
+                    returnTimeSky.push(h);
+                    transferSky.push(response.data[val].transfers);
                 
-    
-                
+
                 };
     
         })();
+
         
-        console.log(`Price: ${priceSky}, airline: ${airlineSky}, flight: ${flightNumbSky}`);
+        $.ajax({
+            url: '/assets/js/flights/airlines.json',
+            method: 'GET',
+            dataType: 'json'
+        }).done(function (response) {
+            
+
+        
+            for (let i = 0; i < airlineSky.length; i++) {
+                var airCode = airlineSky[i];
+                for (let i = 0; i < response.length; i++) {
+
+                    var airId = response[i].id;
+                    var airLogo = response[i].logo;
+
+                    if (airId === airCode) {
+                        flightLogo.push(airLogo);
+                        break
+                    };
+                    
+
+                };
+            };
+            
+            
+
+            $('.ticketBody').empty();
+            var cityFrom = $('#fromFlight').val();
+            var cityTo = $('#toFlight').val();
+            for (let i = 0; i < priceSky.length; i++) {
+                var returnDateFix =  '';
+                if (forReturn === true) {
+                    returnDateFix = `<span class="returnTic">Return: ${returnTimeSky[i][0]} in ${returnTimeSky[i][1]}</span>`
+                } else {
+                    returnDateFix = ''
+                }
+                
+                $('.ticketBody').append(`<div class="ticket">
+                                    <div class="ticImg">
+                                        <img src="${flightLogo[i]}" alt="" class="ticketImg">
+                                    </div>
+                                    <!-- /.ticImg -->
+                                    <div class="ticText">
+                                        <div class="flightGroup">
+                                            <span class="flightTic">${airlineSky[i]} ${flightNumbSky[i]}</span>
+                                        </div>
+                                        <div class="departGroup">
+                                            <div>
+                                                <span class="fromTic">From: ${cityFrom}</span>
+                                                <span class="toTic">To: ${cityTo}</span>
+                                            </div>
+    
+                                        </div>
+                                        <!-- /.departGroup -->
+                                        <div class="dateGroup">
+                                            <span class="departTic">Depart: ${departTimeSky[i][0]} in ${departTimeSky[i][1]}</span>
+                                            ${returnDateFix}
+                                            <span class="transferTic">Transfer: ${transferSky[i]}</span>
+                                        </div>
+    
+                                        <div class="priceGroup">
+                                            <span class="priceTic"> ${priceSky[i]} USD</span>
+                                        </div>
+                                        <!-- /.flightTicGroup -->
+    
+                                    </div>
+                                    <!-- /.ticText -->
+                                </div>
+                                <!-- /.ticket -->`);
+                                resultSearch();
+            }
+
+
+
+
+        });
+        
+
+        
+        
         
         
         
             
         });
-    }
-
-
-
+    };
 
 });
 
@@ -424,10 +534,14 @@ $('.flSbtn').on('click', function() {
 
 
 
+// Direction Change
 
 
 
-
-
+$('.directionChange').on('click', function () {
+    checkInput();
+    $('#fromFlight').val(toInputVal);
+    $('#toFlight').val(fromInputVal);
+});
 
 
