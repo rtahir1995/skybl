@@ -9,7 +9,7 @@ $('#passengerFlights').on('input', function() {
 var d = []
 
 $.ajax({
-    url: 'skybl/assets/js/flights/airports.json',
+    url: '/assets/js/flights/airports.json',
     method: 'GET',
     dataType: 'json'
 }).done(function (response) {
@@ -442,7 +442,7 @@ $('.flSbtn').on('click', function() {
 
         
         $.ajax({
-            url: 'skybl/assets/js/flights/airlines.json',
+            url: '/assets/js/flights/airlines.json',
             method: 'GET',
             dataType: 'json'
         }).done(function (response) {
@@ -473,7 +473,7 @@ $('.flSbtn').on('click', function() {
             for (let i = 0; i < priceSky.length; i++) {
                 var returnDateFix =  '';
                 if (forReturn === true) {
-                    returnDateFix = `<span class="returnTic">Return: ${returnTimeSky[i][0]} in ${returnTimeSky[i][1]}</span>`
+                    returnDateFix = `<div class="returnTic">Return: ${returnTimeSky[i][0]} in ${returnTimeSky[i][1]}</div>`
                 } else {
                     returnDateFix = ''
                 }
@@ -496,17 +496,16 @@ $('.flSbtn').on('click', function() {
                                         </div>
                                         <!-- /.departGroup -->
                                         <div class="dateGroup">
-                                            <span class="departTic">Depart: ${departTimeSky[i][0]} in ${departTimeSky[i][1]}</span>
+                                            <div class="departTic">Depart: ${departTimeSky[i][0]} in ${departTimeSky[i][1]}</div>
                                             ${returnDateFix}
-                                            <span class="transferTic">Transfer: ${transferSky[i]}</span>
+                                            
+                                            <div class="transferTic">Transfer: ${transferSky[i]}</div>
                                         </div>
-    
-                                        <div class="priceGroup">
+                                    </div>
+                                    <div class="priceGroup">
                                             <span class="priceTic"> ${priceSky[i]} USD</span>
                                         </div>
                                         <!-- /.flightTicGroup -->
-    
-                                    </div>
                                     <!-- /.ticText -->
                                 </div>
                                 <!-- /.ticket -->`);
