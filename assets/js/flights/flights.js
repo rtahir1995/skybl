@@ -442,7 +442,7 @@ $('.flSbtn').on('click', function() {
 
         
         $.ajax({
-            url: '/assets/js/flights/airlines.json',
+            url: './assets/js/flights/airlines.json',
             method: 'GET',
             dataType: 'json'
         }).done(function (response) {
