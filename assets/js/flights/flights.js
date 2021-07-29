@@ -447,9 +447,12 @@ $('.flSbtn').on('click', function() {
             dataType: 'json'
         }).done(function (response) {
             
-
+            var airlimit = 4;
+            if (airlimit < airlineSky.length) {
+                airlimir = airlineSky.length;
+            }
         
-            for (let i = 0; i < airlineSky.length; i++) {
+            for (let i = 0; i < airlimit; i++) {
                 var airCode = airlineSky[i];
                 for (let i = 0; i < response.length; i++) {
 
