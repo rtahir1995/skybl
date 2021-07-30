@@ -47,11 +47,15 @@ $('.navClose').on('click', function() {
 
 
 $('.pupup').on('click', function () {
-    $('.pupupSection').hide(300);
-
+    $('.pupupSection').toggle('slow');
 });
 
 $('.logInBtn').on('click', function() {
+    // s
+    $('.pupupSection').toggle('slow');
+});
+
+$('.logBtn').on('click', function() {
     Closed();
     $('.pupupSection').show(300);
 });
@@ -60,7 +64,17 @@ $('.logInPage').on('click', function(event) {
     event.stopPropagation();
 });
 
+$('.deactiveChangeLinkL').on('click', function() {
+    $('.logInForm').toggle('slow', function () {
+        $('.signUpForm').toggle('slow')
+    });
+});
 
+$('.deactiveChangeLinkS').on('click', function() {
+    $('.signUpForm').toggle('slow', function () {
+        $('.logInForm').toggle('slow')
+    });
+});
 // Navigation
 
 // Tab
