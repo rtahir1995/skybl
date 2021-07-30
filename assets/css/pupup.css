@@ -22,10 +22,11 @@
     flex-direction: column;
     max-width: 600px;
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
     background-color: #F07E13;
     border-radius: 20px;
     padding: 0 20px;
+    z-index: 9999999999999999999999;
 }
 
 
@@ -33,6 +34,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    z-index: 9999999999999999999999;
 }
 
 
@@ -48,99 +50,292 @@
 .logInLogo {
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
-}
-
-.logInLogo svg {
-    height: 60px;
-    fill: #fff;
-}
-
-/* Main */
-.pupupMain {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-
-.pupupDes {
-    color: #fff;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.formDiv {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+.logInLogo svg {
+    height: 100px;
+    fill: #fff;
 }
+
+.logInLogo svg:hover {
+    fill: #5C2E00;
+}
+
+/* Main */
 
 .logInForm {
-    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: black;
 }
 
-.formGroup {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 60px;
+.changeLink {
+    margin-left: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    color: #5C2E00;
+    font-size: 16px;
+}
+
+.signUpChangeLink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.signUpChangeLink:hover {
+    color: #5C2E00;
+}
+
+.logInChangeLink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.logInChangeLink:hover {
+    color: #5C2E00;
+}
+
+.activeChangeLink {
+    color: #5C2E00;
+    text-decoration: none;
+}
+
+.logInName {
+    position: relative;
+    height: 60px;
+    width: 100%;
     background-color: #fff;
-    overflow: hidden;
+    margin-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.inputName {
+.logInName label {
     position: absolute;
-    font-size: 20px;
-    top: 15px;
-    left: 25px;
+    top: 5px;
+    left: 20px;
+    color: #DB6E00;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-.email {
-    padding-top: 20px;
-    padding-left: 26px;
-    width: 100%;
+.logInName input {
     height: 100%;
-}
-
-#email {
-    font-size: 20px;
     width: 100%;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border: none;
     outline: none;
 }
 
-.password {
-    padding-top: 20px;
-    padding-left: 26px;
+.logInPassword {
+    position: relative;
+    height: 60px;
     width: 100%;
-    height: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
 }
 
-#password {
-    font-size: 20px;
+.logInPassword label {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #DB6E00;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.logInPassword input {
+    height: 100%;
     width: 100%;
+    padding-left: 20px;
     border: none;
     outline: none;
 }
 
-.buttonDiv {
+.logInGet {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
-}
-
-.logIn {
+    height: 50px;
     width: 100%;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: #C76810;
+    box-shadow: 0px 0px 6px black;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
+.logInGet:hover {
+    background-color: #613308;
+}
 
+.logInGetLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+} 
 
+.logInGet svg {
+    fill: #fff;
+    height: 40px;
+    margin-right: 10px;
+}
 
+/* Sign Up Form */
 
+.signUpForm {
+    display: none;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: black;
+}
 
+.signUpName {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.signUpName label {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #DB6E00;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.signUpName input {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.signUpPassword {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.signUpPassword label {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #DB6E00;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.signUpPassword input {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+}
+
+.signUpPasswordRe {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.signUpPasswordRe label {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #DB6E00;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.signUpPasswordRe input {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+}
+
+.signUpEmail {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.signUpEmail label {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #DB6E00;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.signUpEmail input {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+}
+
+.signUpGet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: #C76810;
+    box-shadow: 0px 0px 6px black;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.signUpGet:hover {
+    background-color: #613308;
+}
+
+.signUpGetLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+} 
+
+.signUpGet svg {
+    fill: #fff;
+    height: 40px;
+    margin-right: 10px;
+}

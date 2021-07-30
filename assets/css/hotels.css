@@ -2,170 +2,350 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Patua+One&display=swap');
 
-/* GENERAL */
 
-.searchTicket {
-    display: none;
-}
+@media  screen and (min-width: 1024px) {
 
+    /* GENERAL */
+    
+    .searchTicket {
+        display: none;
+    }
+    
+    
+    .hotels {
+        display: none;
+        height: 286px;
+    }
+    
+    .mainForm {
+        display: flex;
+        width: 100%;
+        font-family: 'Patua One', cursive;
+    }
+    
+    .hotelGroup1 {
+        display: flex;
+        width: 100%;
+    }
+    
+    .hotelGroup2 {
+        display: flex;
+        width: 100%;
+    }
+    
+    /* Check In */
+    
+    .checkIn {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 3px;
+        background-color: #fff;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    .checkInLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .checkInId {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Check Out */
+    
+    .checkOut {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 3px;
+        background-color: #fff;
+    }
+    
+    .checkOutLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .checkOutId {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Destination */
+    
+    .destination {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 3px;
+        background-color: #fff;
+    }
+    
+    .desLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #destination {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Guests */
+    
+    .guests {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 3px;
+        background-color: #fff;
+    }
+    
+    .guestsLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #guests {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Button */
+    
+    .hotelBtn {
+        width: 150px;
+        height: 60px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #hotelBtn{
+        width: 150px;
+        height: 100%;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #hotelBtn:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
 
-.hotels {
-    display: none;
-    height: 286px;
-}
+}    
 
-.mainForm {
-    display: flex;
-    width: 100%;
-    font-family: 'Patua One', cursive;
-}
+@media  screen  and (max-width: 1023px) {
 
-.hotelGroup1 {
-    display: flex;
-    width: 100%;
-}
+    /* GENERAL */
+    
+    .searchTicket {
+        display: none;
+    }
+    
+    
+    .hotels {
+        display: none;
+        height: 286px;
+    }
+    
+    .mainForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-family: 'Patua One', cursive;
+    }
+    
+    .hotelGroup1 {
+        display: flex;
+        margin-bottom: 3px;
+        width: 100%;
+    }
+    
+    .hotelGroup2 {
+        display: flex;
+        margin-bottom: 3px;
+        width: 100%;
+    }
+    
+    /* Check In */
+    
+    .checkIn {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 3px;
+        background-color: #fff;
+        border-top-left-radius: 10px;
+    }
+    
+    .checkInLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .checkInId {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border-top-left-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Check Out */
+    
+    .checkOut {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #fff;
+        border-top-right-radius: 10px;
+    }
+    
+    .checkOutLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    .checkOutId {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border-top-right-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Destination */
+    
+    .destination {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-right: 3px;
+        background-color: #fff;
+    }
+    
+    .desLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #destination {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Guests */
+    
+    .guests {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #fff;
+    }
+    
+    .guestsLab {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-family: 'Concert One', cursive;
+        font-size: 14px;
+        color: #DB6E00;
+    }
+    
+    #guests {
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+    
+    /* Button */
+    
+    .hotelBtn {
+        width: 100%;
+        height: 60px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #hotelBtn{
+        width: 100%;
+        height: 100%;
+        background-color: #e1450cb7;
+        color: #fff;
+        border: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    #hotelBtn:hover {
+        background-color: #E1450C;
+        color: #5C2E00;
+        transition: all 0.5s ease;
+    }
 
-.hotelGroup2 {
-    display: flex;
-    width: 100%;
-}
-
-/* Check In */
-
-.checkIn {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    margin-right: 3px;
-    background-color: #fff;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.checkInLab {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-family: 'Concert One', cursive;
-    font-size: 14px;
-    color: #DB6E00;
-}
-
-.checkInId {
-    width: 100%;
-    height: 100%;
-    padding-top: 0px;
-    padding-left: 10px;
-    border: none;
-    outline: none;
-}
-
-/* Check Out */
-
-.checkOut {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    margin-right: 3px;
-    background-color: #fff;
-}
-
-.checkOutLab {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-family: 'Concert One', cursive;
-    font-size: 14px;
-    color: #DB6E00;
-}
-
-.checkOutId {
-    width: 100%;
-    height: 100%;
-    padding-top: 0px;
-    padding-left: 10px;
-    border: none;
-    outline: none;
-}
-
-/* Destination */
-
-.destination {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    margin-right: 3px;
-    background-color: #fff;
-}
-
-.desLab {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-family: 'Concert One', cursive;
-    font-size: 14px;
-    color: #DB6E00;
-}
-
-#destination {
-    width: 100%;
-    height: 100%;
-    padding-top: 0px;
-    padding-left: 10px;
-    border: none;
-    outline: none;
-}
-
-/* Guests */
-
-.guests {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    margin-right: 3px;
-    background-color: #fff;
-}
-
-.guestsLab {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-family: 'Concert One', cursive;
-    font-size: 14px;
-    color: #DB6E00;
-}
-
-#guests {
-    width: 100%;
-    height: 100%;
-    padding-top: 0px;
-    padding-left: 10px;
-    border: none;
-    outline: none;
-}
-
-/* Button */
-
-.hotelBtn {
-    width: 150px;
-    height: 60px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-#hotelBtn{
-    width: 150px;
-    height: 100%;
-    background-color: #e1450cb7;
-    color: #fff;
-    border: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-#hotelBtn:hover {
-    background-color: #E1450C;
-    color: #5C2E00;
-    transition: all 0.5s ease;
-}
-
+}    

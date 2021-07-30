@@ -51,7 +51,7 @@ $('.pupup').on('click', function () {
 });
 
 $('.logInBtn').on('click', function() {
-    // s
+    
     $('.pupupSection').toggle('slow');
 });
 
