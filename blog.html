@@ -58,9 +58,9 @@
 <body>
 
 
-    <!-- PUPUP -->
+      <!-- POPUP -->
 
-    <section class="pupupSection">
+      <section class="pupupSection">
         <div class="pupup">
             <div class="logInPage">
                 <div class="pupupBody">
@@ -106,51 +106,104 @@
 
                     <div class="pupupMain">
 
-                        <div class="pupupDes">
-                            <h2>Log in to Skybl</h2>
-                        </div>
-                        <!-- /.pupupDes -->
+                        <div class="logInForm">
+                            <div class="changeLink">
+                                <a href="javascript:void(0)" class="signUpChangeLink deactiveChangeLinkL">Sign Up</a> |
+                                <a href="javascript:void(0)" class="logInChangeLink activeChangeLink">Login</a>
+                            </div>
+                            <div class="logInName">
+                                <label for="logInName">Name</label>
+                                <input type="text" name="logInName" id="logInName" placeholder="Name">
+                            </div>
+                            <!-- /.logInName -->
+                            <div class="logInPassword">
+                                <label for="logInPassword">Passowrd</label>
+                                <input type="password" name="logInPassword" id="logInPassword" placeholder="Password">
+                            </div>
+                            <!-- /.logInPassword -->
 
-                        <div class="formDiv">
-                            <form action="" class="logInForm">
-                                <div class="formGroup">
-                                    <div class="inputName">
-                                        Email
-                                    </div>
-                                    <!-- /.inputName -->
-                                    <label for="email" class="email">
-                                        <input type="email" name="email" id="email" autocomplete="off">
-                                    </label>
-                                    <!-- /.email -->
-                                </div>
-                                <!-- /.formGroup -->
-                            </form>
-                            <!-- /.logInForm -->
-                        </div>
-                        <!-- /.formDiv -->
+                            <div class="logInGet">
 
-                        <div class="formDiv">
-                            <form action="" class="logInForm">
-                                <div class="formGroup">
-                                    <div class="inputName">
-                                        Password
-                                    </div>
-                                    <!-- /.inputName -->
-                                    <label for="password" class="password">
-                                        <input type="password" name="password" id="password" autocomplete="off">
-                                    </label>
-                                    <!-- /.password -->
-                                </div>
-                                <!-- /.formGroup -->
-                            </form>
-                            <!-- /.logInForm -->
+                                <a href="javascript:void(0)" class="logInGetLink">
+                                    <svg viewBox='0 0 100 97'>
+                                        <g>
+                                            <path class="st0"
+                                                d="M49.6,2.9C24.4,2.9,3.9,23.4,3.9,48.7s20.5,45.7,45.7,45.7s45.7-20.5,45.7-45.7S74.9,2.9,49.6,2.9z
+        M61.6,60.7c-7.3,5.1-10.3,12.5-9.6,21.5c-0.4-0.5-0.8-1-1.1-1.5c-4.3-5.9-6.2-12.9-5.6-20.8c0-0.5,0.1-1,0.3-1.5
+        c0.5-1.6,0.7-3.4,1.5-4.9c-1.7-1.3-3.6-2.2-5.4-3.3c-3.3-2.2-5.6-5.6-6.3-9.5c0-0.1,0-0.3,0-0.4l2.8,1.6
+        c3.9,2.3,13.8,5.5,10.2,4.2c-4.6-3-9.4-5.5-14.1-8.3c-3.6-2.3-5.7-5.6-6.6-9.8c0-0.1,0-0.2,0-0.3l3,1.7c4.4,2.5,19.4,9.4,17.7,8.4
+        l-9.5-5.5c-4-2.3-8-4.6-12-6.9c-3.2-1.9-5.6-4.9-6.7-8.4c-0.2-0.6-0.4-1.3-0.5-1.9c0.7,0.3,1.4,0.7,2.1,1.1l12.9,7.5l16,9.2
+        l15.3,8.8c4.7,2.7,9.4,5.4,14.1,8.2c0.2,2.1,0.9,3.4,2.3,4.3c1.1,0.7,1.9,1.7,2.4,2.8l0.8,2.1C77.2,55.3,69.1,55.4,61.6,60.7z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    Log in</a>
+                            </div>
+                            <!-- /.logInGet -->
                         </div>
-                        <!-- /.formDiv -->
+                        <!-- /.logInForm -->
 
-                        <div class="formDiv buttonDiv">
-                            <button class="logIn">Log in</button>
+                        <div class="signUpForm">
+                            <div class="changeLink">
+                                <a href="javascript:void(0)" class="logInChangeLink activeChangeLink">Sign Up</a> |
+                                <a href="javascript:void(0)" class="logInChangeLink deactiveChangeLinkS">Login</a>
+                            </div>
+                            <div class="signUpName">
+                                <label for="signUpName">Name</label>
+                                <input type="text" name="signUpName" id="signUpName" placeholder="Name">
+                            </div>
+
+                            <div class="signUpPassword">
+                                <label for="signUpPassword">Password</label>
+                                <input type="password" name="signUpPassword" id="signUpPassword" placeholder="Password">
+                            </div>
+
+                            <div class="signUpPasswordRe">
+                                <label for="signUpPasswordRe">Repeat Password</label>
+                                <input type="password" name="signUpPasswordRe" id="signUpPassword"
+                                    placeholder="Repeat Password">
+                            </div>
+
+                            <div class="signUpEmail">
+                                <label for="signUpEmail">Email</label>
+                                <input type="text" name="signUpEmail" id="signUpEmail" placeholder="Email">
+                            </div>
+
+                            <div class="signUpGet">
+
+                                <a href="javascript:void(0)" class="signUpGetLink">
+                                    <svg viewBox='0 0 100 97'>
+                                        <g>
+                                            <path class="st0"
+                                                d="M49.6,2.9C24.4,2.9,3.9,23.4,3.9,48.7s20.5,45.7,45.7,45.7s45.7-20.5,45.7-45.7S74.9,2.9,49.6,2.9z
+        M61.6,60.7c-7.3,5.1-10.3,12.5-9.6,21.5c-0.4-0.5-0.8-1-1.1-1.5c-4.3-5.9-6.2-12.9-5.6-20.8c0-0.5,0.1-1,0.3-1.5
+        c0.5-1.6,0.7-3.4,1.5-4.9c-1.7-1.3-3.6-2.2-5.4-3.3c-3.3-2.2-5.6-5.6-6.3-9.5c0-0.1,0-0.3,0-0.4l2.8,1.6
+        c3.9,2.3,13.8,5.5,10.2,4.2c-4.6-3-9.4-5.5-14.1-8.3c-3.6-2.3-5.7-5.6-6.6-9.8c0-0.1,0-0.2,0-0.3l3,1.7c4.4,2.5,19.4,9.4,17.7,8.4
+        l-9.5-5.5c-4-2.3-8-4.6-12-6.9c-3.2-1.9-5.6-4.9-6.7-8.4c-0.2-0.6-0.4-1.3-0.5-1.9c0.7,0.3,1.4,0.7,2.1,1.1l12.9,7.5l16,9.2
+        l15.3,8.8c4.7,2.7,9.4,5.4,14.1,8.2c0.2,2.1,0.9,3.4,2.3,4.3c1.1,0.7,1.9,1.7,2.4,2.8l0.8,2.1C77.2,55.3,69.1,55.4,61.6,60.7z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    Sign Up</a>
+                            </div>
+                            <!-- /.signUpGet -->
                         </div>
-                        <!-- /.formDiv -->
+                        <!-- /.signUpForm -->
+
+                        <div class="logout" style="display: none;"><a href="#" style="text-decoration: none; color: white;">Log out</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                     <!-- /.pupupMain -->
                 </div>
@@ -554,6 +607,12 @@
     <script src="./assets/js/animation.js"></script>
     <script src="./assets/js/flights/flights.js"></script>
     <script src="./assets/js/flights/flying.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="./assets/js/firebase/firebase-config.js"></script>
+    <script src="./assets/js/firebase/firebase.js"></script>
+    <script src="./assets/js/firebase/login-fb.js"></script>
+    <script src="./assets/js/firebase/checker.js"></script>
 
 </body>
 
